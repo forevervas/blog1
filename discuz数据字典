@@ -1,0 +1,4260 @@
+pre_common_admincp_cmenu后台菜单收藏表
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+编号
+title	varchar(255)	否	
+菜单名称
+url	varchar(255)	否	
+菜单地址
+sort	tinyint(1)	否	0	菜单类型,备用
+displayorder	tinyint(3)	否	
+显示顺序
+clicks	smallint(6)	否	1	点击数,备用
+uid	mediumint(8)	否	
+添加用户
+dateline	int(10)	否	
+添加时间
+pre_common_admincp_group后台管理团队表
+
+字段	类型	空	默认	注释
+cpgroupid	smallint(6)	否	
+职务ID
+cpgroupname	varchar(255)	否	
+职务名称
+pre_common_admincp_member后台管理员成员表
+
+字段	类型	空	默认	注释
+uid	int(10)	否	
+成员uid
+cpgroupid	int(10)	否	
+成员组id
+customperm	text	否	
+自定义管理权限
+pre_common_admincp_perm后台权限表
+
+字段	类型	空	默认	注释
+cpgroupid	smallint(6)	否	
+后台组id
+perm	varchar(255)	否	
+后台组权限
+pre_common_admincp_session后台在线管理员表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户id
+adminid	smallint(6)	否	0	管理组id
+panel	tinyint(1)	否	0	面板位置
+ip	varchar(15)	否	
+IP
+dateline	int(10)	否	0	最后动作时间
+errorcount	tinyint(1)	否	0	登录错误次数
+storage	mediumtext	否	
+临时内容存储
+pre_common_admingroup管理组表
+
+字段	类型	空	默认	注释
+admingid	smallint(6)	否	0	所属管理员分组ID
+alloweditpost	tinyint(1)	否	0	是否允许编辑帖子
+alloweditpoll	tinyint(1)	否	0	是否允许编辑投票
+allowstickthread	tinyint(1)	否	0	是否允许置顶主题
+allowmodpost	tinyint(1)	否	0	是否允许审核帖子
+allowdelpost	tinyint(1)	否	0	是否允许删除帖子
+allowmassprune	tinyint(1)	否	0	是否允许批量删帖
+allowrefund	tinyint(1)	否	0	是否允许强制退款
+allowcensorword	tinyint(1)	否	0	兼容性字段
+allowviewip	tinyint(1)	否	0	是否允许查看IP
+allowbanip	tinyint(1)	否	0	是否允许禁止IP
+allowedituser	tinyint(1)	否	0	是否允许编辑用户
+allowmoduser	tinyint(1)	否	0	是否允许审核用户
+allowbanuser	tinyint(1)	否	0	是否允许禁止用户发言
+allowbanvisituser	tinyint(1)	否	0	是否允许禁止用户访问
+allowpostannounce	tinyint(1)	否	0	是否允许发布站点公告
+allowviewlog	tinyint(1)	否	0	是否允许查看管理日志
+allowbanpost	tinyint(1)	否	0	是否允许屏蔽帖子
+supe_allowpushthread	tinyint(1)	否	0	兼容性字段
+allowhighlightthread	tinyint(1)	否	0	是否允许高亮主题
+allowlivethread	tinyint(1)	否	0	是否允许直播帖
+allowdigestthread	tinyint(1)	否	0	是否允许精华主题
+allowrecommendthread	tinyint(1)	否	0	是否允许推荐主题
+allowbumpthread	tinyint(1)	否	0	是否允许提升主题
+allowclosethread	tinyint(1)	否	0	是否允许关闭主题
+allowmovethread	tinyint(1)	否	0	是否允许移动主题
+allowedittypethread	tinyint(1)	否	0	是否允许编辑主题分类
+allowstampthread	tinyint(1)	否	0	是否允许添加主题图章
+allowstamplist	tinyint(1)	否	0	是否允许添加主题图标
+allowcopythread	tinyint(1)	否	0	是否允许复制主题
+allowmergethread	tinyint(1)	否	0	是否允许合并主题
+allowsplitthread	tinyint(1)	否	0	是否允许分割主题
+allowrepairthread	tinyint(1)	否	0	是否允许修复主题
+allowwarnpost	tinyint(1)	否	0	是否允许警告帖子
+allowviewreport	tinyint(1)	否	0	是否允许查看用户报告
+alloweditforum	tinyint(1)	否	0	是否允许编辑版块
+allowremovereward	tinyint(1)	否	0	是否允许移除悬赏
+allowedittrade	tinyint(1)	否	0	是否允许编辑商品
+alloweditactivity	tinyint(1)	否	0	是否允许管理活动报名者
+allowstickreply	tinyint(1)	否	0	是否允许置顶回帖
+allowmanagearticle	tinyint(1)	否	0	是否允许管理所有文章
+allowaddtopic	tinyint(1)	否	0	是否允许创建专题
+allowmanagetopic	tinyint(1)	否	0	是否允许管理专题
+allowdiy	tinyint(1)	否	0	是否允许DIY
+allowclearrecycle	tinyint(1)	否	0	是否允许删除回收站的帖子
+allowmanagetag	tinyint(1)	否	0	是否允许管理标签
+alloweditusertag	tinyint(1)	否	0	是否允许管理用户标签
+managefeed	tinyint(1)	否	0	是否允许管理动态(feed)
+managedoing	tinyint(1)	否	0	是否允许管理记录
+manageshare	tinyint(1)	否	0	是否允许管理分享
+manageblog	tinyint(1)	否	0	是否允许管理日志
+managealbum	tinyint(1)	否	0	是否允许管理相册
+managecomment	tinyint(1)	否	0	是否允许管理评论
+managemagiclog	tinyint(1)	否	0	是否允许管理道具记录
+managereport	tinyint(1)	否	0	是否允许管理举报
+managehotuser	tinyint(1)	否	0	是否允许管理推荐成员
+managedefaultuser	tinyint(1)	否	0	是否允许管理推荐好友
+managevideophoto	tinyint(1)	否	0	是否允许管理视频认证
+managemagic	tinyint(1)	否	0	是否允许管理道具
+manageclick	tinyint(1)	否	0	是否允许管理表态动作
+allowmanagecollection	tinyint(1)	否	0	是否允许管理淘专辑
+allowmakehtml	tinyint(1)	否	0	允许生成门户静态页面
+allowauthorizedarticle	
+
+
+是否允许审核文章
+allowauthorizedblock	
+
+
+是否允许审核模块
+pre_common_adminnote管理团队留言表（后台）
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	
+后台留言id
+admin	varchar(15)	否	
+管理员姓名
+access	tinyint(3)	否	0	哪组可以看到信息
+adminid	tinyint(3)	否	0	管理员id
+dateline	int(10)	否	0	发表时间
+expiration	int(10)	否	0	过期时间
+message	text	否	
+消息内容
+pre_common_advertisement广告数据表
+
+字段	类型	空	默认	注释
+advid	mediumint(8)	否	
+广告id
+available	tinyint(1)	否	0	是否启用
+type	varchar(50)	否	0	类型
+displayorder	tinyint(3)	否	0	显示顺序
+title	varchar(255)	否	
+广告标题
+targets	text	否	
+投放范围
+parameters	text	否	
+参数 序列化存放的数组数据
+code	text	否	
+代码
+starttime	int(10)	否	0	开始时间
+endtime	int(10)	否	0	结束时间
+pre_common_advertisement_custom自定义广告数据表
+
+字段	类型	空	默认	注释
+id	smallint(5)	否	
+自定义广告类型id
+name	varchar(255)	否	
+名称
+pre_common_banned禁止IP访问表
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+禁止id
+ip1	smallint(3)	否	0	IP分段1
+ip2	smallint(3)	否	0	IP分段2
+ip3	smallint(3)	否	0	IP分段3
+ip4	smallint(3)	否	0	IP分段4
+admin	varchar(15)	否	
+管理员姓名
+dateline	int(10)	否	0	禁止时间
+expiration	int(10)	否	0	过期时间
+pre_common_blockDIY模块表
+
+字段	类型	空	默认	注释
+bid	mediumint(8)	否	
+模块ID
+blockclass	varchar(255)	否	0	模块分类 article/pic/member/board/poll
+blocktype	tinyint(1)	否	0	调用类型 0为模板调用 1为js调用
+name	varchar(255)	否	
+模块标名称
+title	text	否	
+模块标题名
+classname	varchar(255)	否	
+指定样式class
+summary	text	否	
+模块自定义内容
+uid	mediumint(8)	否	0	创建者用户ID
+username	varchar(255)	否	
+创建者用户名
+styleid	smallint(6)	否	0	模块风格ID
+blockstyle	text	否	
+自定义风格
+picwidth	smallint(6)	否	0	显示图片长度
+picheight	smallint(6)	否	0	显示图片宽度
+target	varchar(255)	否	
+模块链接打开方式: _blank, _self, _top
+dateformat	varchar(255)	否	
+时间格式： H:i； u； Y-m-d等
+dateuformat	tinyint(1)	否	0	是否使用个性化时间格式
+script	varchar(255)	否	
+模块获取数据脚本名
+param	text	否	
+模块参数配置序列化存储
+shownum	smallint(6)	否	0	获取数据数目
+cachetime	int(10)	否	0	模块缓存更新时间间隔
+cachetimerange	char(5)	否	
+模块缓存更新时间区间
+punctualupdate	tinyint(1)	否	0	是否严格按照缓存时间更新（忽略优化）
+hidedisplay	tinyint(1)	否	0	是否屏蔽输出
+dateline	int(10)	否	0	模块缓存创建时间戳
+notinherited	tinyint(1)	否	0	是否继承所在页面权限
+isblank	tinyint(1)	否	0	是否为空白模块，只显示准送数据
+pre_common_block_favorite模块收藏表
+
+字段	类型	空	默认	注释
+favid	mediumint(8)	否	
+收藏id
+uid	mediumint(8)	否	0	会员id
+bid	mediumint(8)	否	0	模块id
+dateline	int(10)	否	0	收藏时间
+pre_common_block_itemDIY模块数据 - 表
+
+字段	类型	空	默认	注释
+itemid	int(10)	否	
+信息ID
+bid	mediumint(8)	否	0	模块ID
+id	int(10)	否	0	来源ID
+idtype	varchar(255)	否	
+来源ID TYPE，手工添加数据为rand
+itemtype	tinyint(1)	否	0	信息类型 0为自动 1为手工输入 2已编辑
+title	varchar(255)	否	
+信息标题名
+url	varchar(255)	否	
+信息链接地址
+pic	varchar(255)	否	
+信息图片
+picflag	tinyint(1)	否	0	图片类型 0为url 1为本地 2 为ftp远程
+makethumb	tinyint(1)	否	0	是否已生成缩略图 1:生成成功; 2:生成失败
+thumbpath	varchar(255)	否	
+缩略图地址
+summary	text	否	
+信息摘要
+showstyle	text	否	
+显示样式
+related	text	否	
+相关链接
+fields	text	否	
+信息附属num/author/authorid/dateline
+displayorder	smallint(6)	否	0	显示顺序
+startdate	int(10)	否	0	更新时间起始时间戳
+enddate	int(10)	否	0	更新时间结束时间戳
+pre_common_block_item_dataDIY模块数据列表
+
+字段	类型	空	默认	注释
+dataid	int(10)	否	
+推荐信息ID
+bid	mediumint(8)	否	0	模块ID
+id	int(10)	否	0	来源ID
+idtype	varchar(255)	否	
+来源ID TYPE
+itemtype	tinyint(1)	否	0	信息类型 0为自动 1为手工输入 3推荐数据
+title	varchar(255)	否	
+信息标题名
+url	varchar(255)	否	
+信息链接地址
+pic	varchar(255)	否	
+信息图片
+picflag	tinyint(1)	否	0	图片类型 0为url 1为本地 2 为ftp远程
+makethumb	tinyint(1)	否	0	是否已生成缩略图
+summary	text	否	
+信息摘要
+showstyle	text	否	
+显示样式
+related	text	否	
+相关链接
+fields	text	否	
+信息附属num/author/authorid/dateline
+displayorder	smallint(6)	否	0	显示顺序
+startdate	int(10)	否	0	开始时间戳
+enddate	int(10)	否	0	结束时间戳
+uid	mediumint(8)	否	0	推荐者 UID
+username	varchar(255)	否	
+推荐者用户名
+dateline	int(10)	否	0	推荐日期
+isverified	tinyint(1)	否	0	是否已通过审核
+verifiedtime	int(10)	否	0	通过审核日期
+stickgrade	tinyint(2)	否	0	置顶等级： 0～10
+pre_common_block_permissionDIY模块权限分配表
+
+字段	类型	空	默认	注释
+bid	mediumint(8)	否	0	模块ID
+uid	mediumint(8)	否	0	会员id
+allowmanage	tinyint(1)	否	0	允许管理
+allowrecommend	tinyint(1)	否	0	允许推荐
+needverify	tinyint(1)	否	0	推荐需要审核
+inheritedtplname	varchar(255)	否	
+继承自的模板名称
+pre_common_block_picDIY模块附件表
+
+字段	类型	空	默认	注释
+picid	int(10)	否	
+图片ID
+bid	mediumint(8)	否	0	模块ID
+itemid	int(10)	否	0	信息ID
+pic	varchar(255)	否	
+信息图片
+picflag	tinyint(1)	否	0	图片类型 0为本地 1为ftp远程
+type	tinyint(1)	否	0	信息类型 0为模块缩略图 1为上传的图
+pre_common_block_styleDIY模块模板风格代码表
+
+字段	类型	空	默认	注释
+styleid	smallint(6)	否	
+模块样式ID
+blockclass	varchar(255)	否	
+模块分类
+name	varchar(255)	否	
+样式名称
+template	text	否	
+样式模板
+hash	varchar(255)	否	
+样式hash（blockclass + template）
+getpic	tinyint(1)	否	0	是否需要获取pic数据
+getsummary	tinyint(1)	否	0	是否需要获取summary数据
+makethumb	tinyint(1)	否	0	是否需要block设置缩略图
+settarget	tinyint(1)	否	0	是否需要设置链接打开方式
+fields	text	否	
+模板中用到的模块分类字段
+moreurl	tinyint(1)	否	0	是否有更多链接
+pre_common_block_xmlDIY模块 XML 扩展类数据表
+
+字段	类型	空	默认	注释
+id	smallint(5)	否	
+ID
+name	varchar(255)	否	
+XML扩展 名称
+version	varchar(255)	否	
+XML扩展 版本
+url	varchar(255)	否	
+XML扩展 URL
+clientid	varchar(255)	否	
+客户端ID
+key	varchar(255)	否	
+通信密钥
+signtype	varchar(255)	否	
+签名的加密方式：目前只支持MD5方式，空为不使用签名，直接使用通信密钥
+data	text	否	
+XML扩展 数据
+pre_common_cache全局缓存表（后台更新缓存后数据存放）
+
+字段	类型	空	默认	注释
+cachekey	varchar(255)	否	
+缓存 key
+cachevalue	mediumblob	否	
+缓存值
+dateline	int(10)	否	0	缓存时间
+pre_common_card充值卡密表
+
+字段	类型	空	默认	注释
+id	char(255)	否	
+生成的卡片号码
+typeid	smallint(6)	否	1	卡片分类
+maketype	tinyint(1)	否	0	卡片生成的方法
+makeruid	mediumint(8)	否	0	卡片生成者uid
+price	mediumint(8)	否	0	卡片面值
+extcreditskey	tinyint(1)	否	0	充值积分种类
+extcreditsval	int(10)	否	0	积分数额
+status	tinyint(1)	否	1	卡片状态(位与):1:可用,2:已用
+dateline	int(10)	否	0	卡片生成时间
+cleardateline	int(10)	否	0	卡片清理时间
+useddateline	int(10)	否	0	使用时间
+uid	mediumint(8)	否	0	使用者
+pre_common_card_log充值卡密
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+生成的卡片号码
+uid	mediumint(8)	否	0	卡片生成者
+username	varchar(20)	否	
+卡片生成者
+cardrule	varchar(255)	否	
+卡片生成规则
+info	text	否	
+卡片生成log
+dateline	int(10)	否	0	本次log生成时间
+description	mediumtext	否	
+卡片描述
+operation	tinyint(1)	否	0	操作动作(位与):1:生成,2:任务生成,4:删除,9:卡片过期
+pre_common_card_type充值卡类别
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+卡片分类ID
+typename	char(20)	否	
+分类名称
+pre_common_connect_guestQQ登录用户QQ登录插件
+
+字段	类型	空	默认	注释
+conopenid	char(32)	否	
+openid
+conuin	char(40)	否	
+uin
+conuinsecret	char(16)	否	
+uin secret
+conqqnick	char(100)	否	
+临时名称
+pre_common_credit_log全局积分日志详细变更
+
+字段	类型	空	默认	注释
+logid	mediumint(8)	否	
+
+uid	mediumint(8)	否	0	所属用户uid
+operation	char(3)	否	
+操作类型
+relatedid	int(10)	否	
+操作相关ID
+dateline	int(10)	否	
+记录时间
+extcredits1	int(10)	否	
+积分1变化值
+extcredits2	int(10)	否	
+积分2变化值
+extcredits3	int(10)	否	
+积分3变化值
+extcredits4	int(10)	否	
+积分4变化值
+extcredits5	int(10)	否	
+积分5变化值
+extcredits6	int(10)	否	
+积分6变化值
+extcredits7	int(10)	否	
+积分7变化值
+extcredits8	int(10)	否	
+积分8变化值
+pre_common_credit_log_field全局积分日志记录表
+
+字段	类型	空	默认	注释
+logid	mediumint(8)	否	
+
+title	varchar(100)	否	
+
+text	text	否	
+
+pre_common_credit_rule全局积分规则表
+
+字段	类型	空	默认	注释
+rid	mediumint(8)	否	
+规则ID
+rulename	varchar(20)	否	
+规则名称
+action	varchar(20)	否	
+规则action唯一KEY
+cycletype	tinyint(1)	否	0	奖励周期0:一次;1:每天;2:整点;3:间隔分钟;4:不限;
+cycletime	int(10)	否	0	间隔时间
+rewardnum	tinyint(2)	否	1	奖励次数
+norepeat	tinyint(1)	否	0	是否去重1：去重;0：不去重
+extcredits1	int(10)	否	0	扩展1
+extcredits2	int(10)	否	0	扩展2
+extcredits3	int(10)	否	0	扩展3
+extcredits4	int(10)	否	0	扩展4
+extcredits5	int(10)	否	0	扩展5
+extcredits6	int(10)	否	0	扩展6
+extcredits7	int(10)	否	0	扩展7
+extcredits8	int(10)	否	0	扩展8
+fids	text	否	
+记录自定义策略版块ID
+pre_common_credit_rule_log用户积分变动日志表
+
+字段	类型	空	默认	注释
+clid	mediumint(8)	否	
+策略日志ID
+uid	mediumint(8)	否	0	策略日志所有者uid
+rid	mediumint(8)	否	0	策略ID
+fid	mediumint(8)	否	0	版块ID
+total	mediumint(8)	否	0	策略被执行总次数
+cyclenum	mediumint(8)	否	0	周期被执行次数
+extcredits1	int(10)	否	0	扩展1
+extcredits2	int(10)	否	0	扩展2
+extcredits3	int(10)	否	0	扩展3
+extcredits4	int(10)	否	0	扩展4
+extcredits5	int(10)	否	0	扩展5
+extcredits6	int(10)	否	0	扩展6
+extcredits7	int(10)	否	0	扩展7
+extcredits8	int(10)	否	0	扩展8
+starttime	int(10)	否	0	周期开始时间
+dateline	int(10)	否	0	策略最后执行时间
+pre_common_credit_rule_log_field用户积分变动日志扩展表
+
+字段	类型	空	默认	注释
+clid	mediumint(8)	否	0	策略日志ID
+uid	mediumint(8)	否	0	策略日志所有者uid
+info	text	否	
+记录信息防重
+user	text	否	
+记录用户防重
+app	text	否	
+记录应用防重
+pre_common_cron全局计划任务表
+
+字段	类型	空	默认	注释
+cronid	smallint(6)	否	
+计划任务id
+available	tinyint(1)	否	0	是否启用
+type	enum('user', 'system', 'plugin')	否	user	类型
+name	char(50)	否	
+名称
+filename	char(50)	否	
+对应文件
+lastrun	int(10)	否	0	上次执行时间
+nextrun	int(10)	否	0	下次执行时间
+weekday	tinyint(1)	否	0	周计划
+day	tinyint(2)	否	0	日计划
+hour	tinyint(2)	否	0	小时计划
+minute	char(36)	否	
+分计划
+pre_common_devicetoken掌上论坛插件-密钥校验表【插件】掌上论坛
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+
+token	char(50)	否	
+
+pre_common_district全局地区信息表
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	
+地区ID
+name	varchar(255)	否	
+地区名称
+level	tinyint(4)	否	0	地区等级：1，省级；2，市级；3，县级；4，乡镇
+usetype	tinyint(1)	否	0	使用对象：0:都不启用; 1:出生地; 2:居住地; 3:都启用
+upid	mediumint(8)	否	0	上级地区ID
+displayorder	smallint(6)	否	0	显示顺序
+pre_common_diy_dataDIY页面与模块关系数据后台-门户-页面管理
+
+字段	类型	空	默认	注释
+targettplname	varchar(100)	否	
+目标模板文件名
+tpldirectory	varchar(80)	否	
+原模板所在目录
+primaltplname	varchar(255)	否	
+原模板文件名
+diycontent	mediumtext	否	
+DIY的内容
+name	varchar(255)	否	
+目标模板页面名称
+uid	mediumint(8)	否	0	会员id
+username	varchar(15)	否	
+用户名
+dateline	int(10)	否	0	更新时间
+pre_common_domain域名相关数据表后台-全局-域名设置
+
+字段	类型	空	默认	注释
+domain	char(30)	否	
+域名前缀
+domainroot	char(60)	否	
+二级域名后缀
+id	mediumint(8)	否	0	对应对象id
+idtype	char(15)	否	
+对应对象类型subarea:分区、forum:版块、home:个人空间、group:群组、topic:专题、channel:频道
+pre_common_failedip登录失败日志记录尝试登录IP密码错误次数记录
+
+字段	类型	空	默认	注释
+ip	char(7)	否	
+用户登陆IP地址
+lastupdate	int(10)	否	0	最后登陆
+count	tinyint(1)	否	0	登陆失败次数
+pre_common_failedlogin登录失败日志记录 尝试登录用户名错误次数记录
+
+字段	类型	空	默认	注释
+ip	char(15)	否	
+失败IP
+username	char(32)	否	
+失败时的用户名
+count	tinyint(1)	否	0	尝试次数
+lastupdate	int(10)	否	0	最后一次尝试时间
+pre_common_friendlink友情链接表
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+id
+displayorder	tinyint(3)	否	0	显示顺序，正序
+name	varchar(100)	否	
+名称
+url	varchar(255)	否	
+url
+description	mediumtext	否	
+解释说明
+logo	varchar(255)	否	
+logo
+type	tinyint(3)	否	0	
+pre_common_grouppm群发短消息表X2以上
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+消息id
+authorid	mediumint(8)	否	0	作者id
+author	varchar(15)	否	
+作者姓名
+dateline	int(10)	否	0	时间
+message	text	否	
+消息
+numbers	mediumint(8)	否	0	数量
+pre_common_invite推广邀请数据 （积分推广）
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	
+ID
+uid	mediumint(8)	否	0	邀请人
+code	char(20)	否	
+邀请码
+fuid	mediumint(8)	否	0	受邀人UID
+fusername	char(20)	否	
+受邀人姓名
+type	tinyint(1)	否	0	邮件邀请 1是0否
+email	char(40)	否	
+邀请Email
+inviteip	char(15)	否	
+邀请IP
+appid	mediumint(8)	否	0	应用ID
+dateline	int(10)	否	0	邀请码生成时间
+endtime	int(10)	否	0	邀请码结束时间
+regdateline	int(10)	否	0	注册时间
+status	tinyint(1)	否	1	邀请码状态
+orderid	char(32)	否	
+购买邀请码的订单号id
+pre_common_magic道具数据表
+
+字段	类型	空	默认	注释
+magicid	smallint(6)	否	
+道具id
+available	tinyint(1)	否	0	是否可用
+name	varchar(50)	否	
+名称
+identifier	varchar(40)	否	
+唯一标识
+description	varchar(255)	否	
+描述
+displayorder	tinyint(3)	否	0	顺序
+credit	tinyint(1)	否	0	使用的积分
+price	mediumint(8)	否	0	价格
+num	smallint(6)	否	0	数量
+salevolume	smallint(6)	否	0	销售量
+supplytype	tinyint(1)	否	0	自动补货类型
+supplynum	smallint(6)	否	0	自动补货数量
+useperoid	tinyint(1)	否	0	使用周期
+usenum	smallint(6)	否	0	周期使用数量
+weight	tinyint(3)	否	1	重量
+magicperm	text	否	
+权限
+useevent	tinyint(1)	否	0	0:只在特定环境使用 1:可以在道具中心使用
+pre_common_magiclog道具日志表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户id
+magicid	smallint(6)	否	0	道具id
+action	tinyint(1)	否	0	操作动作 1 购买 2 使用 3 赠送
+dateline	int(10)	否	0	操作时间
+amount	smallint(6)	否	0	操作数量
+credit	tinyint(1)	否	0	操作积分
+price	mediumint(8)	否	0	操作价格
+targetid	int(10)	否	0	
+idtype	char(6)	是	
+道具类型
+targetuid	mediumint(8)	否	0	道具目标uid
+pre_common_mailcron邮件发送任务表
+
+字段	类型	空	默认	注释
+cid	mediumint(8)	否	
+计划编号
+touid	mediumint(8)	否	0	接收用户的UID
+email	varchar(100)	否	
+邮件
+sendtime	int(10)	否	0	发布时间
+pre_common_mailqueue邮件队列表
+
+字段	类型	空	默认	注释
+qid	mediumint(8)	否	
+邮件发送ID
+cid	mediumint(8)	否	0	邮件计划ID
+subject	text	否	
+主题
+message	text	否	
+邮件内容
+dateline	int(10)	否	0	推送时间
+pre_common_member用户主表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+会员id
+email	char(40)	否	
+邮箱
+username	char(15)	否	
+用户名
+password	char(32)	否	
+密码
+status	tinyint(1)	否	0	判断用户是否已经删除
+原home字段为flag
+emailstatus	tinyint(1)	否	0	email是否经过验证 1=验证通过 0=未验证
+home字段为emailcheck
+avatarstatus	tinyint(1)	否	0	是否有头像
+1=已上传 0=未上传
+videophotostatus	tinyint(1)	否	0	视频认证状态
+1=是 0=否
+adminid	tinyint(1)	否	0	管理组id
+1=管理员 2=超级版主 3=版主
+groupid	smallint(6)	否	0	会员组groupid
+groupexpiry	int(10)	否	0	扩展用户组有效期
+extgroupids	char(20)	否	
+扩展用户组ID数组
+regdate	int(10)	否	0	注册时间
+credits	int(10)	否	0	总积分
+notifysound	tinyint(1)	否	0	短信声音
+timeoffset	char(4)	否	
+时区校正
+newpm	smallint(6)	否	0	新短消息数量
+newprompt	smallint(6)	否	0	新提醒数目
+accessmasks	tinyint(1)	否	0	访问权限
+allowadmincp	tinyint(1)	否	0	管理权限
+onlyacceptfriendpm	tinyint(1)	否	0	是否只接收好友短消息
+conisbind	tinyint(1)	否	0	用户是否绑定QC
+freeze	tinyint(1)	否	0	是否被冻结
+pre_common_member_action_log用户操作日志表
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	
+记录id
+uid	mediumint(8)	否	0	用户ID
+action	tinyint(5)	否	0	动作
+dateline	int(10)	否	0	操作时间
+pre_common_member_connectQQ互联记录表X3新增
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户ID
+conuin	char(40)	否	
+用户UIN
+conuinsecret	char(16)	否	
+加密串
+conopenid	char(32)	否	
+OPENID
+conisfeed	tinyint(1)	否	0	连接动态
+conispublishfeed	tinyint(1)	否	0	是否同步动态
+conispublisht	tinyint(1)	否	0	操作时间
+conisregister	tinyint(1)	否	0	是否通过QQ互联注册
+conisqzoneavatar	tinyint(1)	否	0	是否使用QZONE头像
+conisqqshow	tinyint(1)	否	0	是否使用QQ秀作为头像
+pre_common_member_count用户统计表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+会员id
+extcredits1	int(10)	否	0	声望
+extcredits2	int(10)	否	0	金钱
+extcredits3	int(10)	否	0	扩展
+extcredits4	int(10)	否	0	扩展
+extcredits5	int(10)	否	0	扩展
+extcredits6	int(10)	否	0	扩展
+extcredits7	int(10)	否	0	扩展
+extcredits8	int(10)	否	0	扩展
+friends	smallint(6)	否	0	好友个数 home
+posts	mediumint(8)	否	0	帖子数
+threads	mediumint(8)	否	0	主题数
+digestposts	smallint(6)	否	0	精华数
+doings	smallint(6)	否	0	记录数
+blogs	smallint(6)	否	0	日志数
+albums	smallint(6)	否	0	相册数
+sharings	smallint(6)	否	0	分享数
+attachsize	int(10)	否	0	上传附件占用的空间 home
+views	mediumint(8)	否	0	空间查看数
+oltime	smallint(6)	否	0	在线时间
+todayattachs	smallint(6)	否	0	当天上传附件数
+todayattachsize	int(10)	否	0	当天上传附件容量
+feeds	mediumint(8)	否	0	广播数
+follower	mediumint(8)	否	0	听众数量
+following	mediumint(8)	否	0	收听数量
+newfollower	mediumint(8)	否	0	新增听众数量
+blacklist	mediumint(8)	否	0	
+pre_common_member_crime用户惩罚操作表
+
+字段	类型	空	默认	注释
+cid	mediumint(8)	否	
+自增id
+uid	mediumint(8)	否	0	被惩罚操作的用户id
+operatorid	mediumint(8)	否	0	进行惩罚操作的用户id
+operator	varchar(15)	否	
+进行惩罚操作的用户名
+action	tinyint(5)	否	
+惩罚行为
+reason	text	否	
+惩罚理由
+dateline	int(10)	否	0	惩罚操作时间
+pre_common_member_field_forum用户论坛字段表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+会员id
+publishfeed	tinyint(3)	否	0	用户自定义发送哪些类型的feed(原字段为customaddfeed)
+customshow	tinyint(1)	否	26	自定义帖子显示模式
+customstatus	varchar(30)	否	
+自定义头衔
+medals	text	否	
+勋章信息
+sightml	text	否	
+签名
+groupterms	text	否	
+公共用户组
+authstr	varchar(20)	否	
+找回密码验证串
+groups	mediumtext	否	
+用户所有群组
+attentiongroup	varchar(255)	否	
+用户偏好
+pre_common_member_field_home用户家园字段表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+会员id
+videophoto	varchar(255)	否	
+视频认证照片地址 home
+spacename	varchar(255)	否	
+空间名称
+spacedescription	varchar(255)	否	
+空间简介
+domain	char(15)	否	
+空间绑定二级域名 home
+addsize	int(10)	否	0	额外授予的上传空间 home
+addfriend	smallint(6)	否	0	额外允许增加的好友数 home
+menunum	smallint(6)	否	0	应用显示个数
+theme	varchar(20)	否	
+空间风格主题 home
+spacecss	text	否	
+个人空间自定义css home
+blockposition	text	否	
+个人空间自定义模块位置及相关参数 home
+recentnote	text	否	
+最近一次行为记录
+spacenote	text	否	
+最近一次twitter
+privacy	text	否	
+home隐私设置(注意要和论坛发feed等开关的设置结合)
+feedfriend	mediumtext	否	
+接受feed的好友缓存
+acceptemail	text	否	
+接受新通知邮件及设置邮件接收参数
+magicgift	text	否	
+道具红包卡相关信息
+stickblogs	text	否	
+置顶的日志ID
+pre_common_member_forum_buylog用户版块积分付费记录 
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+用户id
+fid	mediumint(8)	否	0	板块id
+credits	int(10)	否	0	已付金额
+pre_common_member_grouppm群发短消息用户记录表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	会员id
+gpmid	smallint(6)	否	
+消息id
+status	tinyint(1)	否	0	0=未读 1=已读 -1=删除
+dateline	int(10)	否	0	阅读时间
+pre_common_member_log漫游用户日志表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	
+action	char(10)	否	
+add,update,delete
+dateline	int(10)	否	0	
+pre_common_member_magic用户道具数据表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户uid
+magicid	smallint(6)	否	0	道具id
+num	smallint(6)	否	0	拥有数量
+pre_common_member_medal用户勋章数据表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+
+medalid	smallint(6)	否	
+
+pre_common_member_newprompt用户新提醒数量表 X3新增
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+
+data	varchar(255)	否	
+
+pre_common_member_profile用户详细资料表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+会员id
+realname	varchar(255)	否	
+实名
+gender	tinyint(1)	否	0	性别
+birthyear	smallint(6)	否	0	出生年
+birthmonth	tinyint(3)	否	0	出生月
+birthday	tinyint(3)	否	0	出生日
+constellation	varchar(255)	否	
+星座(根据生日自动计算)
+zodiac	varchar(255)	否	
+生肖(根据生日自动计算)
+telephone	varchar(255)	否	
+固定电话
+mobile	varchar(255)	否	
+手机
+idcardtype	varchar(255)	否	
+证件类型：身份证 护照 军官证等
+idcard	varchar(255)	否	
+证件号码
+address	varchar(255)	否	
+邮寄地址
+zipcode	varchar(255)	否	
+邮编
+nationality	varchar(255)	否	
+国籍
+birthprovince	varchar(255)	否	
+出生省份
+birthcity	varchar(255)	否	
+出生城市
+birthdist	varchar(20)	否	
+出生行政区/县
+birthcommunity	varchar(255)	否	
+出生小区
+resideprovince	varchar(255)	否	
+居住省份
+residecity	varchar(255)	否	
+居住城市
+residedist	varchar(20)	否	
+居住行政区/县
+residecommunity	varchar(255)	否	
+居住小区
+residesuite	varchar(255)	否	
+小区、写字楼门牌号
+graduateschool	varchar(255)	否	
+毕业学校
+company	varchar(255)	否	
+公司
+education	varchar(255)	否	
+学历
+occupation	varchar(255)	否	
+职业
+position	varchar(255)	否	
+职位
+revenue	varchar(255)	否	
+年收入
+affectivestatus	varchar(255)	否	
+情感状态
+lookingfor	varchar(255)	否	
+交友目的（交友类型）
+bloodtype	varchar(255)	否	
+血型
+height	varchar(255)	否	
+身高
+weight	varchar(255)	否	
+体重
+alipay	varchar(255)	否	
+支付宝帐号
+icq	varchar(255)	否	
+ICQ
+qq	varchar(255)	否	
+QQ
+yahoo	varchar(255)	否	
+YAHOO
+msn	varchar(255)	否	
+MSN
+taobao	varchar(255)	否	
+阿里旺旺
+site	varchar(255)	否	
+主页
+bio	text	否	
+自我介绍 来自论坛bio字段
+interest	text	否	
+兴趣爱好
+field1	text	否	
+自定义字段1
+field2	text	否	
+自定义字段2
+field3	text	否	
+自定义字段3
+field4	text	否	
+自定义字段4
+field5	text	否	
+自定义字段5
+field6	text	否	
+自定义字段6
+field7	text	否	
+自定义字段7
+field8	text	否	
+自定义字段8
+mobilephonecheck	
+
+
+是否验证
+mobilephoneauthstr	
+
+
+验证字串
+marry	
+
+
+婚姻状态
+gtalk	
+
+
+gtalk帐号
+pre_common_member_profile_setting后台用户栏目设置表
+
+字段	类型	空	默认	注释
+fieldid	varchar(255)	否	
+profile字段标志符
+available	tinyint(1)	否	0	是否可用
+invisible	tinyint(1)	否	0	是否隐藏
+needverify	tinyint(1)	否	0	是否需要审核
+title	varchar(255)	否	
+栏目标题
+description	varchar(255)	否	
+解释说明
+displayorder	smallint(6)	否	0	显示顺序
+required	tinyint(1)	否	0	是否必填内容
+unchangeable	tinyint(1)	否	0	不可修改
+showincard	tinyint(1)	否	0	在名片中显示
+showinthread	tinyint(1)	否	0	在帖子中显示
+showinregister	tinyint(1)	否	0	是否在注册页面显示
+allowsearch	tinyint(1)	否	0	是否可搜索
+formtype	varchar(255)	否	
+表单元素类型
+size	smallint(6)	否	0	内容最大长度
+choices	text	否	
+选填内容
+validate	text	否	
+验证数据的正则表达式
+pre_common_member_security个人资料审核记录
+
+字段	类型	空	默认	注释
+securityid	mediumint(8)	否	
+审核项id
+uid	mediumint(8)	否	0	会员id
+username	varchar(255)	否	
+用户名
+fieldid	varchar(255)	否	
+profile字段标志符
+oldvalue	text	否	
+旧的profile字段值
+newvalue	text	否	
+新的profile字段值
+dateline	int(10)	否	0	提交日期
+pre_common_member_secwhite用户被执行管理操作间隔时间表X3新增
+
+字段	类型	空	默认	注释
+uid	int(10)	否	
+
+dateline	int(10)	否	
+
+pre_common_member_stat_field用户资料统计项
+
+字段	类型	空	默认	注释
+optionid	mediumint(8)	否	
+资料统计项 id
+fieldid	varchar(255)	否	
+资料项字段标志符
+fieldvalue	varchar(255)	否	
+
+hash	varchar(255)	否	
+由fieldid和fieldvalue生成的hash
+users	mediumint(8)	否	0	对应用户数
+updatetime	int(10)	否	0	更新时间
+pre_common_member_status用户状态与数据统计表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+会员id
+regip	char(15)	否	
+注册IP
+lastip	char(15)	否	
+最后登录IP
+port	smallint(6)	否	0	端口
+lastvisit	int(10)	否	0	最后访问
+lastactivity	int(10)	否	0	最后活动
+lastpost	int(10)	否	0	最后发表
+lastsendmail	int(10)	否	0	上次发送email时间 home原字段为lastsend
+invisible	tinyint(1)	否	0	是否隐身登录
+buyercredit	smallint(6)	否	0	买家信用等级及积分
+sellercredit	smallint(6)	否	0	卖家信用等级及积分
+favtimes	mediumint(8)	否	0	个人空间收藏次数
+sharetimes	mediumint(8)	否	0	个人空间分享次数
+profileprogress	tinyint(2)	否	0	个人资料完成度
+pre_common_member_validate用户审核表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	会员id
+submitdate	int(10)	否	0	提交日期
+moddate	int(10)	否	0	审核日期
+admin	varchar(15)	否	
+管理员名
+submittimes	tinyint(3)	否	0	提交的次数
+status	tinyint(1)	否	0	状态
+message	text	否	
+注册原因
+remark	text	否	
+管理员留言
+pre_common_member_verify用户资料认证状态表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+会员id
+verify1	tinyint(1)	否	0	认证1: -1:被拒绝 0:待审核 1:审核通过
+verify2	tinyint(1)	否	0	认证2: -1:被拒绝 0:待审核 1:审核通过
+verify3	tinyint(1)	否	0	认证3: -1:被拒绝 0:待审核 1:审核通过
+verify4	tinyint(1)	否	0	认证4: -1:被拒绝 0:待审核 1:审核通过
+verify5	tinyint(1)	否	0	认证5: -1:被拒绝 0:待审核 1:审核通过
+verify6	tinyint(1)	否	0	实名认证: -1:被拒绝 0:待审核 1:审核通过
+verify7	tinyint(1)	否	0	视频认证: -1:被拒绝 0:待审核 1:审核通过
+pre_common_member_verify_info用户资料认证审核数据
+
+字段	类型	空	默认	注释
+vid	mediumint(8)	否	
+审核id
+uid	mediumint(8)	否	0	会员id
+username	varchar(30)	否	
+用户名
+verifytype	tinyint(1)	否	0	审核类型0:资料审核, 1:认证1, 2:认证2, 3:认证3, 4:认证4, 5:认证5
+flag	tinyint(1)	否	0	-1:被拒绝 0:待审核 1:审核通过
+field	text	否	
+序列化存储变化值
+dateline	int(10)	否	0	提交日期
+pre_common_myapp漫游应用表
+
+字段	类型	空	默认	注释
+appid	mediumint(8)	否	0	应用id
+appname	varchar(60)	否	
+应用名称
+narrow	tinyint(1)	否	0	是否显示为窄的profile box
+flag	tinyint(1)	否	0	应用状态（黑白名单、默认应用等）
+version	mediumint(8)	否	0	应用版本号
+userpanelarea	tinyint(1)	否	0	userabout显示区域、1主区、2、副区、3应用区
+canvastitle	varchar(60)	否	
+canvas页面标题
+fullscreen	tinyint(1)	否	0	是否是全屏应用
+displayuserpanel	tinyint(1)	否	0	是否显示应用右侧的用户菜单
+displaymethod	tinyint(1)	否	0	显示方式（iframe/myml）
+displayorder	smallint(6)	否	0	显示顺序
+appstatus	tinyint(2)	否	0	标识应用1:新、2:热
+iconstatus	tinyint(2)	否	0	应用图标是否已下载到本地。-1：失败；0：未下载；1：已下载
+icondowntime	int(10)	否	0	应用图标下载到本地时间
+pre_common_myinvite用户邀请推广数据
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	
+邀请id
+typename	varchar(100)	否	
+邀请名称
+appid	mediumint(8)	否	0	应用id
+type	tinyint(1)	否	0	类型(request 邀请/invite 请求)
+fromuid	mediumint(8)	否	0	邀请者id
+touid	mediumint(8)	否	0	接收者id
+myml	text	否	
+邀请内容
+dateline	int(10)	否	0	发送邀请的时间戳
+hash	int(10)	否	0	hash标记
+pre_common_mytask用户任务记录
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	
+用户Uid
+username	char(15)	否	
+用户名
+taskid	smallint(6)	否	
+任务id
+status	tinyint(1)	否	0	任务状态
+csc	char(255)	否	
+任务进度
+dateline	int(10)	否	0	申请任务时间
+pre_common_nav界面导航（后台 - 界面 - 界面导航）
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+项目id
+parentid	smallint(6)	否	0	父 id(navtype=0)
+name	varchar(255)	否	
+导航名称
+title	varchar(255)	否	
+导航说明
+url	varchar(255)	否	
+导航链接
+identifier	varchar(255)	否	
+链接标识/相关ID
+target	tinyint(1)	否	0	目标框架
+type	tinyint(1)	否	0	类型 0 系统 1 自定义 3 插件 4 频道
+available	tinyint(1)	否	0	是否可用
+displayorder	tinyint(3)	否	
+显示顺序
+highlight	tinyint(1)	否	0	样式(navtype=0)
+level	tinyint(1)	否	0	使用等级
+subtype	tinyint(1)	否	0	二级导航样式(navtype=0) 顶部导航位置(navtype=4)
+subcols	tinyint(1)	否	0	横排一行显示的条目数(navtype=0)
+icon	varchar(255)	否	
+图标地址(navtype=1、3)
+subname	varchar(255)	否	
+副导航名称(navtype=1)
+suburl	varchar(255)	否	
+副导航地址(navtype=1)
+navtype	tinyint(1)	否	0	导航类型
+logo	varchar(255)	否	
+自定义 Logo
+pre_common_onlinetime在线时间表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	
+thismonth	smallint(6)	否	0	本月在线时间
+total	mediumint(8)	否	0	总在线时间
+lastupdate	int(10)	否	0	
+pre_common_optimizer后台-站长-优化大师 数据表X3新增
+
+字段	类型	空	默认	注释
+k	char(100)	否	
+
+v	char(255)	否	
+
+pre_common_patch漏洞补丁表
+
+字段	类型	空	默认	注释
+serial	varchar(10)	否	
+漏洞编号
+rule	text	否	
+修补规则
+note	text	否	
+漏洞说明
+status	tinyint(1)	否	0	修补状态
+dateline	int(10)	否	0	漏洞发布时间
+pre_common_plugin插件数据表DX插件（应用）信息都在此表
+
+字段	类型	空	默认	注释
+pluginid	smallint(6)	否	
+插件ID
+available	tinyint(1)	否	0	是否可用
+adminid	tinyint(1)	否	0	使用插件的管理组
+name	varchar(40)	否	
+插件名称
+identifier	varchar(40)	否	
+唯一标识符
+description	varchar(255)	否	
+描述
+datatables	varchar(255)	否	
+插件单独使用的数据表
+directory	varchar(100)	否	
+插件目录
+copyright	varchar(100)	否	
+插件版权
+modules	text	否	
+serialize后的插件配置
+version	varchar(20)	否	
+版本
+pre_common_pluginvar插件设置数据表保存插件设置里的各项参数
+
+字段	类型	空	默认	注释
+pluginvarid	mediumint(8)	否	
+插件变量id
+pluginid	smallint(6)	否	0	插件id
+displayorder	tinyint(3)	否	0	显示顺序
+title	varchar(100)	否	
+名称
+description	varchar(255)	否	
+解释说明
+variable	varchar(40)	否	
+变量名
+type	varchar(20)	否	text	类型
+value	text	否	
+值
+extra	text	否	
+附加
+pre_common_process防灌水功能用户记录表插件（防水墙）
+
+字段	类型	空	默认	注释
+processid	char(32)	否	
+锁名称的md5
+expiry	int(10)	是	
+锁的过期时间
+extra	int(10)	是	
+锁的附属信息
+pre_common_regip注册IP限制表
+
+字段	类型	空	默认	注释
+ip	char(15)	否	
+IP地址
+dateline	int(10)	否	0	限制时间
+count	smallint(6)	否	0	限制数量
+pre_common_relatedlink关联链接表
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+id
+name	varchar(100)	否	
+名称
+url	varchar(255)	否	
+url
+extent	tinyint(3)	否	0	
+pre_common_remote_port未使用的功能（冗余）X3新增
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	0	
+idtype	char(15)	否	
+
+useip	char(15)	否	
+
+port	smallint(6)	否	0	
+pre_common_report用户举报表
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	
+记录id
+urlkey	char(32)	否	
+地址md5
+url	varchar(255)	否	
+地址
+message	text	否	
+举报理由
+uid	mediumint(8)	否	0	会员id
+username	varchar(15)	否	
+用户名
+dateline	int(10)	否	0	举报时间
+num	smallint(6)	否	1	举报次数
+opuid	mediumint(8)	否	0	管理员id
+opname	varchar(15)	否	
+管理员姓名
+optime	int(10)	否	0	处理时间
+opresult	varchar(255)	否	
+对举报人的奖惩
+fid	mediumint(8)	否	0	论坛id
+pre_common_searchindex搜索功能索引表
+
+字段	类型	空	默认	注释
+searchid	int(10)	否	
+缓存id
+srchmod	tinyint(3)	否	
+mod模块
+keywords	varchar(255)	否	
+关键字
+searchstring	text	否	
+查找字符串
+useip	varchar(15)	否	
+搜索人IP
+uid	mediumint(10)	否	0	会员id
+dateline	int(10)	否	0	搜索时间
+expiration	int(10)	否	0	过期时间
+threadsortid	smallint(6)	否	0	分类信息id
+num	smallint(6)	否	0	主题数量
+ids	text	否	
+主题id序列
+pre_common_seccheck 防灌水 - 验证码
+
+字段	类型	空	默认	注释
+ssid	int(10)	否	
+
+dateline	int(10)	否	
+
+code	char(6)	否	
+
+succeed	tinyint(1)	否	
+
+verified	tinyint(1)	否	
+
+pre_common_secquestion防灌水 - 验证问题
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+验证问题id
+type	tinyint(1)	否	
+验证问题类型
+question	text	否	
+验证问题
+answer	varchar(255)	否	
+问题答案
+pre_common_session在线用户session临时记录（SID分配）
+
+字段	类型	空	默认	注释
+sid	char(6)	否	
+sid
+ip1	tinyint(3)	否	0	IP段
+ip2	tinyint(3)	否	0	IP段
+ip3	tinyint(3)	否	0	IP段
+ip4	tinyint(3)	否	0	IP段
+uid	mediumint(8)	否	0	会员id
+username	char(15)	否	
+会员名
+groupid	smallint(6)	否	0	会员组
+invisible	tinyint(1)	否	0	是否隐身登录
+action	tinyint(1)	否	0	当前动作
+lastactivity	int(10)	否	0	最后活动时间
+lastolupdate	int(10)	否	0	在线时间最后更新
+fid	mediumint(8)	否	0	论坛id
+tid	mediumint(8)	否	0	主题id
+pre_common_setting后台各项设置参数表
+
+字段	类型	空	默认	注释
+skey	varchar(255)	否	
+
+svalue	text	否	
+
+pre_common_smiley表情数据
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+表情id
+typeid	smallint(6)	否	
+表情分类 id
+displayorder	tinyint(1)	否	0	显示顺序
+type	enum('smiley', 'stamp', 'stamplist')	否	smiley	类型
+code	varchar(30)	否	
+标记
+url	varchar(30)	否	
+路径
+pre_common_sphinxcounterSphinx 索引记录已抛弃功能
+
+字段	类型	空	默认	注释
+indexid	tinyint(1)	否	
+
+maxid	int(10)	否	
+
+pre_common_stat站点趋势统计记录
+
+字段	类型	空	默认	注释
+daytime	int(10)	否	0	时间
+login	int(10)	否	0	登陆
+mobilelogin	int(10)	否	0	手机登陆
+connectlogin	int(10)	否	0	QQConnect登陆
+register	int(10)	否	0	注册
+invite	int(10)	否	0	邀请
+appinvite	int(10)	否	0	应用邀请
+doing	int(10)	否	0	记录
+blog	int(10)	否	0	日志
+pic	int(10)	否	0	图片
+poll	int(10)	否	0	投票
+activity	int(10)	否	0	活动
+share	int(10)	否	0	分享
+thread	int(10)	否	0	主题
+docomment	int(10)	否	0	记录评论
+blogcomment	int(10)	否	0	日志评论
+piccomment	int(10)	否	0	图片评论
+sharecomment	int(10)	否	0	分享评论
+reward	int(10)	否	0	悬赏
+debate	int(10)	否	0	辩论
+trade	int(10)	否	0	商品
+group	int(10)	否	0	群组
+groupjoin	int(10)	否	0	参与群组
+groupthread	int(10)	否	0	群组主题
+grouppost	int(10)	否	0	群组回复
+post	int(10)	否	0	主题回复
+wall	int(10)	否	0	留言
+poke	int(10)	否	0	打招呼
+click	int(10)	否	0	表态
+sendpm	int(10)	否	0	发送PM
+friend	int(10)	否	0	成为好友
+addfriend	int(10)	否	0	好友请求
+pre_common_statuser统计用户表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	
+daytime	int(10)	否	0	
+type	char(20)	否	
+各种用户行为如：invite、register、login...
+pre_common_style界面风格
+
+字段	类型	空	默认	注释
+styleid	smallint(6)	否	
+风格id
+name	varchar(20)	否	
+风格名称
+available	tinyint(1)	否	1	风格是否可用
+templateid	smallint(6)	否	0	对应模板id
+extstyle	varchar(255)	否	
+配色
+pre_common_stylevar界面风格 变量 
+
+字段	类型	空	默认	注释
+stylevarid	smallint(6)	否	
+风格变量id
+styleid	smallint(6)	否	0	风格id
+variable	text	否	
+变量名
+substitute	text	否	
+变量赋值
+pre_common_syscache缓存数据表
+
+字段	类型	空	默认	注释
+cname	varchar(32)	否	
+缓存名称
+ctype	tinyint(3)	否	
+缓存类型 0=value, serialize=1
+dateline	int(10)	否	
+缓存生成时间
+data	mediumblob	否	
+缓存数据
+pre_common_tag标签表
+
+字段	类型	空	默认	注释
+tagid	mediumint(8)	否	
+标签id
+tagname	char(20)	否	
+标签名
+status	tinyint(1)	否	0	显示状态
+pre_common_tagitem标签内容表
+
+字段	类型	空	默认	注释
+tagid	mediumint(8)	否	0	标签id
+itemid	mediumint(8)	否	0	itemid
+idtype	char(10)	否	
+内容类型
+pre_common_task论坛任务表
+
+字段	类型	空	默认	注释
+taskid	smallint(6)	否	
+任务id
+relatedtaskid	smallint(6)	否	0	依存任务id
+available	tinyint(1)	否	0	是否启用
+name	varchar(50)	否	
+任务名称
+description	text	否	
+任务描述
+icon	varchar(150)	否	
+任务图标
+applicants	mediumint(8)	否	0	已申请任务人次
+achievers	mediumint(8)	否	0	已完成任务人次
+tasklimits	mediumint(8)	否	0	允许申请并完成该任务的人次上限
+applyperm	text	否	
+允许申请任务的用户组id, 格式: 1 2 3
+scriptname	varchar(50)	否	
+任务脚本文件名
+starttime	int(10)	否	0	任务上线时间
+endtime	int(10)	否	0	任务下线时间
+period	int(10)	否	0	任务周期 单位：小时 默认为0表示一次性任务 设置为24即1天表示日常任务
+periodtype	tinyint(1)	否	0	任务间隔周期单位 0:小时 1:天 2:周 3:月
+reward	enum('credit', 'magic', 'medal', 'invite', 'group')	否	credit	奖励类型
+prize	varchar(15)	否	
+奖品: 哪一个扩展积分, 道具id, 勋章id,邀请码有效期， 特殊用户组id
+bonus	int(10)	否	0	奖品数量/有效期:
+displayorder	smallint(6)	否	0	显示顺序
+version	varchar(15)	否	
+任务脚本版本号
+pre_common_taskvar论坛任务设置表
+
+字段	类型	空	默认	注释
+taskvarid	mediumint(8)	否	
+任务变量id
+taskid	smallint(6)	否	0	任务id
+sort	enum('apply', 'complete')	否	complete	变量类别
+name	varchar(100)	否	
+变量名称
+description	varchar(255)	否	
+变量描述
+variable	varchar(40)	否	
+变量名
+type	varchar(20)	否	text	变量类型
+value	text	否	
+变量值
+pre_common_template模板体系表
+
+字段	类型	空	默认	注释
+templateid	smallint(6)	否	
+模板id
+name	varchar(30)	否	
+名称
+directory	varchar(100)	否	
+目录
+copyright	varchar(100)	否	
+版权
+pre_common_template_block模板页面和模块的关联表
+
+字段	类型	空	默认	注释
+targettplname	varchar(100)	否	
+目标模板文件名
+tpldirectory	varchar(80)	否	
+原模板所在目录
+bid	mediumint(8)	否	0	模块ID
+pre_common_template_permissionDIY模板页面权限表
+
+字段	类型	空	默认	注释
+targettplname	varchar(100)	否	
+目标模板
+uid	mediumint(8)	否	0	用户ID
+allowmanage	tinyint(1)	否	0	允许管理
+allowrecommend	tinyint(1)	否	0	允许推荐
+needverify	tinyint(1)	否	0	推荐需要审核
+inheritedtplname	varchar(255)	否	
+继承自的模板名称
+pre_common_uin_blackQQ互联黑名单表
+
+字段	类型	空	默认	注释
+uin	char(40)	否	
+
+uid	mediumint(8)	否	0	用户ID
+dateline	int(10)	否	0	创建时间
+pre_common_usergroup用户组表
+
+字段	类型	空	默认	注释
+groupid	smallint(6)	否	
+会员组id
+radminid	tinyint(3)	否	0	关联关管理组
+type	enum('system', 'special', 'member')	否	member	类型
+system	varchar(255)	否	private	会员是否可以自由进出
+grouptitle	varchar(255)	否	
+组头衔
+creditshigher	int(10)	否	0	该组的积分上限
+creditslower	int(10)	否	0	该组的积分下限
+stars	tinyint(3)	否	0	星星数量
+color	varchar(255)	否	
+组头衔颜色
+icon	varchar(255)	否	
+
+allowvisit	tinyint(1)	否	0	允许访问
+allowsendpm	tinyint(1)	否	1	是否允许发送短信息
+allowinvite	tinyint(1)	否	0	允许使用邀请注册
+allowmailinvite	tinyint(1)	否	0	允许通过论坛邮件系统发送邀请码
+maxinvitenum	tinyint(3)	否	0	最大邀请码拥有数量
+inviteprice	smallint(6)	否	0	邀请码购买价格
+maxinviteday	smallint(6)	否	0	邀请码有效期
+pre_common_usergroup_field会员用户组权限表
+
+字段	类型	空	默认	注释
+groupid	smallint(6)	否	
+会员组id
+readaccess	tinyint(3)	否	0	阅读权限
+allowpost	tinyint(1)	否	0	允许发帖
+allowreply	tinyint(1)	否	0	允许回复
+allowpostpoll	tinyint(1)	否	0	允许发表投票
+allowpostreward	tinyint(1)	否	0	允许发表悬赏
+allowposttrade	tinyint(1)	否	0	允许发表交易
+allowpostactivity	tinyint(1)	否	0	允许发表活动
+allowdirectpost	tinyint(1)	否	0	是否需要审核
+allowgetattach	tinyint(1)	否	0	允许下载附件
+allowgetimage	tinyint(1)	否	0	允许查看图片
+allowpostattach	tinyint(1)	否	0	允许上传附件
+allowpostimage	tinyint(1)	否	0	允许上传图片
+allowvote	tinyint(1)	否	0	允许参与投票
+allowsearch	tinyint(1)	否	0	允许搜索
+allowcstatus	tinyint(1)	否	0	允许自定义头衔
+allowinvisible	tinyint(1)	否	0	允许隐身登录
+allowtransfer	tinyint(1)	否	0	允许积分转帐
+allowsetreadperm	tinyint(1)	否	0	允许设置阅读权限
+allowsetattachperm	tinyint(1)	否	0	允许设置附件权限
+allowposttag	tinyint(1)	否	0	允许使用标签
+allowhidecode	tinyint(1)	否	0	允许使用hide代码
+allowhtml	tinyint(1)	否	0	允许使用html
+allowanonymous	tinyint(1)	否	0	允许匿名发帖
+allowsigbbcode	tinyint(1)	否	0	允许签名使用bbcode
+allowsigimgcode	tinyint(1)	否	0	允许使用img
+allowmagics	tinyint(1)	否	
+允许使用道具
+disableperiodctrl	tinyint(1)	否	0	不受时间段限制
+reasonpm	tinyint(1)	否	0	操作理由短信通知作者
+maxprice	smallint(6)	否	0	主题最大售价
+maxsigsize	smallint(6)	否	0	最大签名尺寸
+maxattachsize	int(10)	否	0	最大附件尺寸
+maxsizeperday	int(10)	否	0	每天最大附件总尺寸
+maxthreadsperhour	tinyint(3)	否	0	每小时发主题数限制
+maxpostsperhour	tinyint(3)	否	0	每小时发回帖数限制
+attachextensions	char(100)	否	
+允许发表的附件类型
+raterange	char(150)	否	
+评分范围
+loginreward	char(150)	否	
+
+mintradeprice	smallint(6)	否	1	交易最小积分
+maxtradeprice	smallint(6)	否	0	交易最大积分
+minrewardprice	smallint(6)	否	1	悬赏最小积分
+maxrewardprice	smallint(6)	否	0	悬赏最大积分
+magicsdiscount	tinyint(1)	否	
+道具折扣
+maxmagicsweight	smallint(6)	否	
+道具负载最大值
+allowpostdebate	tinyint(1)	否	0	允许发表辩论
+tradestick	tinyint(1)	否	
+可商品推荐数
+exempt	tinyint(1)	否	
+用户组表达式
+maxattachnum	smallint(6)	否	0	最大每天附件数量
+allowposturl	tinyint(1)	否	3	是否允许发送含 url 内容
+allowrecommend	tinyint(1)	否	1	是否允许评价主题
+allowpostrushreply	tinyint(1)	否	0	允许发表抢楼帖
+maxfriendnum	smallint(6)	否	0	最多好友数
+maxspacesize	int(10)	否	0	空间大小
+allowcomment	tinyint(1)	否	0	发表留言/评论
+allowcommentarticle	smallint(6)	否	0	发表文章的评论
+searchinterval	smallint(6)	否	0	两次搜索操作间隔
+searchignore	tinyint(1)	否	0	是否免费搜索
+allowblog	tinyint(1)	否	0	发表日志
+allowdoing	tinyint(1)	否	0	发表记录
+allowupload	tinyint(1)	否	0	上传图片
+allowshare	tinyint(1)	否	0	发布分享
+allowblogmod	tinyint(1)	否	0	发表日志需要审核
+allowdoingmod	tinyint(1)	否	0	发表记录需要审核
+allowuploadmod	tinyint(1)	否	0	上传图片需要审核
+allowsharemod	tinyint(1)	否	0	发布分享需要审核
+allowcss	tinyint(1)	否	0	允许自定义CSS
+allowpoke	tinyint(1)	否	0	允许打招呼
+allowfriend	tinyint(1)	否	0	允许加好友
+allowclick	tinyint(1)	否	0	允许表态
+allowmagic	tinyint(1)	否	0	允许使用道具
+allowstat	tinyint(1)	否	0	允许查看趋势统计
+allowstatdata	tinyint(1)	否	0	允许查看统计数据报表
+videophotoignore	tinyint(1)	否	0	视频认证限制
+allowviewvideophoto	tinyint(1)	否	0	允许查看视频认证
+allowmyop	tinyint(1)	否	0	允许使用应用
+magicdiscount	tinyint(1)	否	0	购买道具折扣
+domainlength	smallint(6)	否	0	二级域名最短长度
+seccode	tinyint(1)	否	1	发布操作需填验证码
+disablepostctrl	tinyint(1)	否	0	发表是否受防灌水限制
+allowbuildgroup	tinyint(1)	否	0	是否允许建立群组，0为不允许
+allowgroupdirectpost	tinyint(1)	否	0	是否允许直接在群组中发帖
+allowgroupposturl	tinyint(1)	否	0	是否允许在群组中发站外URL
+edittimelimit	smallint(6)	否	0	编辑帖子时间限制
+allowpostarticle	tinyint(1)	否	0	允许发布文章
+allowdownlocalimg	tinyint(1)	否	0	允许下载本地图片
+allowdownremoteimg	tinyint(1)	否	0	允许下载远程图片
+allowpostarticlemod	tinyint(1)	否	0	发布文章是否需要审核
+allowspacediyhtml	tinyint(1)	否	0	允许自定义模块使用HTML
+allowspacediybbcode	tinyint(1)	否	0	允许自定义模块使用BBCODE
+allowspacediyimgcode	tinyint(1)	否	0	允许自定义模块使用[img]
+allowcommentpost	tinyint(1)	否	2	允许帖子点评 0:禁止 1:楼主 2:回复 3:All
+allowcommentitem	tinyint(1)	否	0	允许发表点评观点
+allowcommentreply	tinyint(1)	否	0	允许发表回复点评
+allowreplycredit	tinyint(1)	否	0	允许设置回帖奖励
+ignorecensor	tinyint(1)	否	0	是否忽略要审核的关键字
+allowsendallpm	tinyint(1)	否	0	是否不受“只接收好友短消息”设置的限制
+allowsendpmmaxnum	smallint(6)	否	0	24小时内允许发短消息的数量
+maximagesize	mediumint(8)	否	0	相册中允许最大图片大小
+allowmediacode	tinyint(1)	否	0	允许使用多媒体代码
+allowbegincode	tinyint(1)	否	0	
+allowat	smallint(6)	否	0	允许@用户 0：禁止 n:发帖时@的数量
+allowsetpublishdate	tinyint(1)	否	0	允许定时发布主题
+allowfollowcollection	tinyint(1)	否	0	允许关注淘专辑数
+allowcommentcollection	tinyint(1)	否	0	允许评论淘专辑
+allowcreatecollection	smallint(6)	否	0	允许创建淘专辑数
+forcesecques	tinyint(1)	否	0	
+forcelogin	tinyint(1)	否	0	
+closead	tinyint(1)	否	0	
+buildgroupcredits	smallint(6)	否	0	
+allowimgcontent	tinyint(1)	否	0	
+allowmultigroups	
+
+
+允许加入/离开公共用户组
+pre_common_visit用户访问日志表X3新增
+
+字段	类型	空	默认	注释
+ip	int(10)	否	0	
+view	int(10)	否	0	
+pre_common_word词语过滤表
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+词汇id
+admin	varchar(15)	否	
+管理员名
+type	smallint(6)	否	1	关键词分类
+find	varchar(255)	否	
+不良词语
+replacement	varchar(255)	否	
+替换内容
+extra	varchar(255)	否	
+
+pre_common_word_type词语过滤分类
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+词语过滤分类id
+typename	varchar(15)	否	
+分类名称
+pre_connect_disktaskQQ互联计划任务表插件
+
+字段	类型	空	默认	注释
+taskid	int(10)	否	
+
+aid	int(10)	否	0	
+uid	int(10)	否	0	
+openid	char(32)	否	
+
+filename	varchar(255)	否	
+
+verifycode	char(32)	否	
+
+status	smallint(6)	否	0	
+dateline	int(10)	否	0	
+downloadtime	int(10)	否	0	
+extra	text	是	
+
+pre_connect_feedlogQQ互联feed日志表插件
+
+字段	类型	空	默认	注释
+flid	mediumint(8)	否	
+顺序ID
+tid	mediumint(8)	否	0	主题ID
+uid	mediumint(8)	否	0	用户ID
+publishtimes	mediumint(8)	否	0	调用次数
+lastpublished	int(10)	否	0	最后推送feed时间
+dateline	int(10)	否	0	创建时间
+status	tinyint(1)	否	1	1:未推送 2:已推送 3:推送成功 4:已删除
+pre_connect_memberbindlogQQ互联用户绑定/解绑记录表 插件
+
+字段	类型	空	默认	注释
+mblid	mediumint(8)	否	
+顺序ID
+uid	mediumint(8)	否	0	PK
+uin	char(40)	否	
+connect uin
+type	tinyint(1)	否	0	1:绑定 2:解绑
+dateline	int(10)	否	0	创建时间
+pre_connect_postfeedlogQQ互联用户发帖日志表插件
+
+字段	类型	空	默认	注释
+flid	mediumint(8)	否	
+
+pid	int(10)	否	0	
+uid	mediumint(8)	否	0	
+publishtimes	mediumint(8)	否	0	
+lastpublished	int(10)	否	0	
+dateline	int(10)	否	0	
+status	tinyint(1)	否	1	
+pre_connect_tthreadlogQQ互联主题日志表插件
+
+字段	类型	空	默认	注释
+twid	char(16)	否	
+
+tid	mediumint(8)	否	0	
+conopenid	char(32)	否	
+
+pagetime	int(10)	是	0	
+lasttwid	char(16)	是	
+
+nexttime	int(10)	是	0	
+updatetime	int(10)	是	0	
+dateline	int(10)	是	0	
+pre_forum_access访问权限表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	会员id
+fid	mediumint(8)	否	0	论坛id
+allowview	tinyint(1)	否	0	允许浏览
+allowpost	tinyint(1)	否	0	允许发表
+allowreply	tinyint(1)	否	0	允许回复
+allowgetattach	tinyint(1)	否	0	允许下载附件
+allowgetimage	tinyint(1)	否	0	允许查看图片
+allowpostattach	tinyint(1)	否	0	允许上传附件
+allowpostimage	tinyint(1)	否	0	允许上传图片
+adminuser	mediumint(8)	否	0	管理员id
+dateline	int(10)	否	0	时间
+pre_forum_activity活动特殊主题 扩展主题数据
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题id
+uid	mediumint(8)	否	0	会员id
+aid	mediumint(8)	否	0	主题图片id
+cost	mediumint(8)	否	0	每人花销
+starttimefrom	int(10)	否	0	开始时间
+starttimeto	int(10)	否	0	结束时间
+place	varchar(255)	否	
+地点
+class	varchar(255)	否	
+类别
+gender	tinyint(1)	否	0	性别
+number	smallint(5)	否	0	人数
+applynumber	smallint(5)	否	0	已参加人数
+expiration	int(10)	否	0	报名截止日期
+ufield	text	否	
+用户定制项目
+credit	smallint(6)	否	0	需消耗的积分
+pre_forum_activityapply活动特殊主题 申请数据
+
+字段	类型	空	默认	注释
+applyid	int(10)	否	
+申请id
+tid	mediumint(8)	否	0	主题id
+username	varchar(255)	否	
+用户名
+uid	mediumint(8)	否	0	会员id
+message	varchar(255)	否	
+消息
+verified	tinyint(1)	否	0	是否审核通过
+dateline	int(10)	否	0	申请时间
+payment	mediumint(8)	否	0	每人花销
+ufielddata	text	否	
+用户定制项目数据
+pre_forum_announcement论坛公告
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+公告id
+author	varchar(15)	否	
+作者姓名
+subject	varchar(255)	否	
+公告标题
+type	tinyint(1)	否	0	公告类型
+displayorder	tinyint(3)	否	0	显示顺序
+starttime	int(10)	否	0	开始时间
+endtime	int(10)	否	0	结束时间
+message	text	否	
+消息
+groups	text	否	
+接受用户组
+pre_forum_attachment附件索引表 记录10个分表关系
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+tableid	tinyint(1)	否	0	附件表id
+downloads	mediumint(8)	否	0	下载次数
+pre_forum_attachment_0附件分表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+description	varchar(255)	否	
+说明
+readperm	tinyint(3)	否	0	阅读权限
+price	smallint(6)	否	0	附件价格
+isimage	tinyint(1)	否	0	是否图片
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否是缩率图
+picid	mediumint(8)	否	0	相册图片ID
+pre_forum_attachment_1附件分表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+description	varchar(255)	否	
+说明
+readperm	tinyint(3)	否	0	阅读权限
+price	smallint(6)	否	0	附件价格
+isimage	tinyint(1)	否	0	是否图片
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否是缩率图
+picid	mediumint(8)	否	0	相册图片ID
+pre_forum_attachment_2附件分表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+description	varchar(255)	否	
+说明
+readperm	tinyint(3)	否	0	阅读权限
+price	smallint(6)	否	0	附件价格
+isimage	tinyint(1)	否	0	是否图片
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否是缩率图
+picid	mediumint(8)	否	0	相册图片ID
+pre_forum_attachment_3附件分表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+description	varchar(255)	否	
+说明
+readperm	tinyint(3)	否	0	阅读权限
+price	smallint(6)	否	0	附件价格
+isimage	tinyint(1)	否	0	是否图片
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否是缩率图
+picid	mediumint(8)	否	0	相册图片ID
+pre_forum_attachment_4附件分表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+description	varchar(255)	否	
+说明
+readperm	tinyint(3)	否	0	阅读权限
+price	smallint(6)	否	0	附件价格
+isimage	tinyint(1)	否	0	是否图片
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否是缩率图
+picid	mediumint(8)	否	0	相册图片ID
+pre_forum_attachment_5附件分表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+description	varchar(255)	否	
+说明
+readperm	tinyint(3)	否	0	阅读权限
+price	smallint(6)	否	0	附件价格
+isimage	tinyint(1)	否	0	是否图片
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否是缩率图
+picid	mediumint(8)	否	0	相册图片ID
+pre_forum_attachment_6附件分表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+description	varchar(255)	否	
+说明
+readperm	tinyint(3)	否	0	阅读权限
+price	smallint(6)	否	0	附件价格
+isimage	tinyint(1)	否	0	是否图片
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否是缩率图
+picid	mediumint(8)	否	0	相册图片ID
+pre_forum_attachment_7附件分表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+description	varchar(255)	否	
+说明
+readperm	tinyint(3)	否	0	阅读权限
+price	smallint(6)	否	0	附件价格
+isimage	tinyint(1)	否	0	是否图片
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否是缩率图
+picid	mediumint(8)	否	0	相册图片ID
+pre_forum_attachment_8附件分表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+description	varchar(255)	否	
+说明
+readperm	tinyint(3)	否	0	阅读权限
+price	smallint(6)	否	0	附件价格
+isimage	tinyint(1)	否	0	是否图片
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否是缩率图
+picid	mediumint(8)	否	0	相册图片ID
+pre_forum_attachment_9附件分表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+description	varchar(255)	否	
+说明
+readperm	tinyint(3)	否	0	阅读权限
+price	smallint(6)	否	0	附件价格
+isimage	tinyint(1)	否	0	是否图片
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否是缩率图
+picid	mediumint(8)	否	0	相册图片ID
+pre_forum_attachment_exif附件Exif信息
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+exif	text	否	
+exif信息
+pre_forum_attachment_unused用户临时附件表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+附件id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+isimage	tinyint(1)	否	0	是否图片
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否是缩率图
+pre_forum_attachtype附件类型表
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+类型id
+fid	mediumint(8)	否	0	论坛id
+extension	char(12)	否	
+扩展名
+maxsize	int(10)	否	0	允许上传最大值
+pre_forum_bbcodeDiscuz BBbcode 代码表
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	
+代码id
+available	tinyint(1)	否	0	是否启用
+tag	varchar(100)	否	
+标签
+icon	varchar(255)	否	
+图标
+replacement	text	否	
+替换内容
+example	varchar(255)	否	
+例子
+explanation	text	否	
+解释说明
+params	tinyint(1)	否	1	参数个数
+prompt	text	否	
+标签描述
+nest	tinyint(3)	否	1	嵌套层次
+displayorder	tinyint(3)	否	0	显示顺序
+perm	text	否	
+有权使用的用户组
+pre_forum_collection淘帖专辑表
+
+字段	类型	空	默认	注释
+ctid	mediumint(8)	否	
+专辑ID
+uid	mediumint(8)	否	0	用户ID
+username	varchar(15)	否	
+用户名
+name	varchar(50)	否	
+专辑名
+dateline	int(10)	否	0	创建时间
+follownum	mediumint(8)	否	0	订阅数
+threadnum	mediumint(8)	否	0	主题数
+commentnum	mediumint(8)	否	0	评论数
+desc	varchar(255)	否	
+简介
+lastupdate	int(10)	否	0	最后变动时间
+rate	float	否	0	评分
+ratenum	mediumint(8)	否	0	评分次数
+lastpost	mediumint(8)	否	0	最后主题ID
+lastsubject	varchar(80)	否	
+最后主题标题
+lastposttime	int(10)	否	0	最后主题时间
+lastposter	varchar(15)	否	
+最后主题发帖者
+lastvisit	int(10)	否	0	创建者最后访问
+keyword	varchar(255)	否	
+专辑关键词
+pre_forum_collectioncomment淘帖评论表
+
+字段	类型	空	默认	注释
+cid	mediumint(8)	否	
+评论ID
+ctid	mediumint(8)	否	0	专辑ID
+uid	mediumint(8)	否	0	用户ID
+username	varchar(15)	否	
+用户名
+message	text	否	
+评论内容
+dateline	int(10)	否	0	评论时间
+useip	varchar(16)	否	
+IP地址
+port	smallint(6)	否	0	
+rate	float	否	0	评分
+pre_forum_collectionfollow淘帖关注表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户ID
+username	char(15)	否	
+用户名
+ctid	mediumint(8)	否	0	专辑ID
+dateline	int(10)	否	0	关注时间
+lastvisit	int(10)	否	0	最后访问专辑时间
+pre_forum_collectioninvite邀请管理淘专辑
+
+字段	类型	空	默认	注释
+ctid	mediumint(8)	否	0	专辑ID
+uid	mediumint(8)	否	0	邀请合作者ID
+dateline	int(10)	否	0	邀请时间
+pre_forum_collectionrelated淘帖主题被收入专辑表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题ID
+collection	text	否	
+专辑列表
+pre_forum_collectionteamworker淘帖合作编辑表
+
+字段	类型	空	默认	注释
+ctid	mediumint(8)	否	0	专辑ID
+uid	mediumint(8)	否	0	合作者ID
+name	varchar(50)	否	
+专辑名
+username	varchar(15)	否	
+用户名
+lastvisit	int(8)	否	0	最后访问专辑时间
+pre_forum_collectionthread淘帖包含主题表
+
+字段	类型	空	默认	注释
+ctid	mediumint(8)	否	0	专辑ID
+tid	mediumint(8)	否	0	专辑内主题ID
+dateline	int(10)	否	0	主题日期
+reason	varchar(255)	否	
+推荐理由
+pre_forum_creditslog转帐记录表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	会员id
+fromto	char(15)	否	
+来自/到
+sendcredits	tinyint(1)	否	0	转出积分字段
+receivecredits	tinyint(1)	否	0	接受积分字段
+send	int(10)	否	0	转出积分
+receive	int(10)	否	0	接受积分
+dateline	int(10)	否	0	转帐日期
+operation	char(3)	否	
+操作
+pre_forum_debate辩论主题表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题id
+uid	mediumint(8)	否	0	发起人id
+starttime	int(10)	否	0	开始时间
+endtime	int(10)	否	0	结束时间
+affirmdebaters	mediumint(8)	否	0	正方辩论人数
+negadebaters	mediumint(8)	否	0	反方辩论人数
+affirmvotes	mediumint(8)	否	0	正方得票数
+negavotes	mediumint(8)	否	0	反方得票数
+umpire	varchar(15)	否	
+裁判用户名
+winner	tinyint(1)	否	0	获胜方
+bestdebater	varchar(50)	否	
+最佳辩手用户名
+affirmpoint	text	否	
+正方观点
+negapoint	text	否	
+反方观点
+umpirepoint	text	否	
+裁判观点，裁判结束辩论时填写
+affirmvoterids	text	否	
+正方投票人的 id 集合
+negavoterids	text	否	
+反方投票人的 id 集合
+affirmreplies	mediumint(8)	否	
+正方回复次数，用来翻页
+negareplies	mediumint(8)	否	
+反方回复次数，用来翻页
+pre_forum_debatepost辩论帖子表
+
+字段	类型	空	默认	注释
+pid	int(10)	否	0	帖子id
+stand	tinyint(1)	否	0	立场
+tid	mediumint(8)	否	0	主题id
+uid	mediumint(8)	否	0	发起人id
+dateline	int(10)	否	0	发表的时间
+voters	mediumint(10)	否	0	投票人数
+voterids	text	否	
+投票人的 id 集合
+pre_forum_faq论坛帮助表
+
+字段	类型	空	默认	注释
+id	smallint(6)	否	
+帮助id
+fpid	smallint(6)	否	0	帮助父id
+displayorder	tinyint(3)	否	0	排序
+identifier	varchar(20)	否	
+帮助标识
+keyword	varchar(50)	否	
+帮助关键词
+title	varchar(50)	否	
+帮助标题
+message	text	否	
+帮助内容
+pre_forum_filter_post帖子是否水贴标记表X3新增
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	
+pid	int(10)	否	0	
+postlength	int(10)	否	0	
+pre_forum_forum版块基础信息表
+
+字段	类型	空	默认	注释
+fid	mediumint(8)	否	
+论坛id
+fup	mediumint(8)	否	0	上级论坛id
+type	enum('group', 'forum', 'sub')	否	forum	类型
+name	char(50)	否	
+名称
+status	tinyint(1)	否	0	显示状态
+displayorder	smallint(6)	否	0	显示顺序
+styleid	smallint(6)	否	0	风格id
+threads	mediumint(8)	否	0	主题数量
+posts	mediumint(8)	否	0	帖子数量
+todayposts	mediumint(8)	否	0	今日发帖数量
+yesterdayposts	mediumint(8)	否	0	
+rank	smallint(6)	否	0	
+oldrank	smallint(6)	否	0	
+lastpost	char(110)	否	
+最后发表
+domain	char(15)	否	
+绑定的二级域名
+allowsmilies	tinyint(1)	否	0	允许使用表情
+allowhtml	tinyint(1)	否	0	允许使用html
+allowbbcode	tinyint(1)	否	0	允许bbcode
+allowimgcode	tinyint(1)	否	0	允许img
+allowmediacode	tinyint(1)	否	0	允许使用多媒体代码
+allowanonymous	tinyint(1)	否	0	允许匿名
+allowpostspecial	smallint(6)	否	0	允许发表特殊主题
+allowspecialonly	tinyint(1)	否	0	只允许发表特殊主题
+allowappend	tinyint(1)	否	0	是否开启帖子补充
+alloweditrules	tinyint(1)	否	0	允许版主修改论坛规则
+allowfeed	tinyint(1)	否	1	允许推送动态,默认推送广播
+allowside	tinyint(1)	否	0	显示边栏
+recyclebin	tinyint(1)	否	0	是否启用回收站
+modnewposts	tinyint(1)	否	0	是否审核发帖
+jammer	tinyint(1)	否	0	是否启用干扰码
+disablewatermark	tinyint(1)	否	0	是否图片附件增加水印
+inheritedmod	tinyint(1)	否	0	本论坛或分类版主的权力继承到下级论坛
+autoclose	smallint(6)	否	0	自动关闭主题
+forumcolumns	tinyint(3)	否	0	增加论坛水平横排设置
+catforumcolumns	tinyint(3)	否	0	增加分区版块水平横排设置
+threadcaches	tinyint(1)	否	0	主题缓存功能设置
+alloweditpost	tinyint(1)	否	1	允许编辑帖子
+simple	tinyint(1)	否	0	只显示子版块
+modworks	tinyint(1)	否	0	本版有待处理的管理事项
+allowglobalstick	tinyint(1)	否	1	是否显示全局置顶
+level	smallint(6)	否	0	群组等级
+commoncredits	int(10)	否	0	群组公共积分
+archive	tinyint(1)	否	0	是否有存档表
+recommend	smallint(6)	否	0	推荐到的版块
+favtimes	mediumint(8)	否	0	版块或群组的收藏次数
+sharetimes	mediumint(8)	否	0	版块或群组的分享次数
+disablethumb	tinyint(1)	否	0	是否添加缩略图
+disablecollect	tinyint(1)	否	0	禁止淘帖
+pre_forum_forum_threadtable版块存档信息
+
+字段	类型	空	默认	注释
+fid	smallint(6)	否	
+版块id
+threadtableid	smallint(6)	否	
+thread分区id
+threads	int(11)	否	0	主题数
+posts	int(11)	否	0	帖子数
+pre_forum_forumfield版块扩展信息表
+
+字段	类型	空	默认	注释
+fid	mediumint(8)	否	0	版块id
+description	text	否	
+解释说明
+password	varchar(12)	否	
+私密论坛密码
+icon	varchar(255)	否	
+图标
+redirect	varchar(255)	否	
+URL转发
+attachextensions	varchar(255)	否	
+允许上传附件类型
+creditspolicy	mediumtext	否	
+版块积分策略
+formulaperm	text	否	
+版块权限表达式
+moderators	text	否	
+版主列表，格式:admin
+rules	text	否	
+版块规则
+threadtypes	text	否	
+主题分类，序列化存放的设置，格式为一个数组
+threadsorts	text	否	
+分类信息，序列化存放的设置，格式为一个数组
+viewperm	text	否	
+阅读权限, 格式: 1 4 5
+postperm	text	否	
+发表权限, 格式: 1 4 5
+replyperm	text	否	
+回复权限, 格式: 1 4 5
+getattachperm	text	否	
+下载附件权限, 格式: 1 4 5
+postattachperm	text	否	
+上传附件权限, 格式: 1 4 5
+postimageperm	text	否	
+上传图片权限, 格式: 1 4 5
+spviewperm	text	否	
+不受限于版权权限表达式, 格式: 1 4 5
+seotitle	text	否	
+版块seo标题
+keywords	text	否	
+版块seo关键词
+seodescription	text	否	
+版块seo描述
+supe_pushsetting	text	否	
+supe推送设置，序列化存放设置数据，格式为一个数组。
+modrecommend	text	否	
+版主推荐规则
+threadplugin	text	否	
+特殊主题插件数据
+replybg	text	否	
+
+extra	text	否	
+预留字段,如版块颜色，版块图标
+jointype	tinyint(1)	否	0	加入群组方式 -1为关闭，0为公开， 2邀请
+gviewperm	tinyint(1)	否	0	群组浏览权限 0:仅成员 1:所有用户
+membernum	smallint(6)	否	0	群组成员数
+dateline	int(10)	否	0	群组创建时间
+lastupdate	int(10)	否	0	群组最后更新时间
+activity	int(10)	否	0	群组活跃度
+founderuid	mediumint(8)	否	0	群组创始人UID
+foundername	varchar(255)	否	
+群组创始人名称
+banner	varchar(255)	否	
+群组头图片
+groupnum	smallint(6)	否	0	分类下的群组数量
+commentitem	text	否	
+主题点评预置观点
+relatedgroup	text	否	
+相关的群组
+picstyle	tinyint(1)	否	0	帖子列表是否以图片形式显示 0:否 1:是
+widthauto	tinyint(1)	否	0	默认是否宽屏 0:全局 -1:宽屏 1:窄屏
+noantitheft	tinyint(1)	否	0	
+noforumhidewater	tinyint(1)	否	0	
+noforumrecommend	tinyint(1)	否	0	
+livetid	mediumint(8)	否	0	
+price	mediumint(8)	否	0	
+pre_forum_forumrecommend版主推荐数据表
+
+字段	类型	空	默认	注释
+fid	mediumint(8)	否	0	版块id
+tid	mediumint(8)	否	
+帖子id
+typeid	smallint(6)	否	
+是否含有附件图片
+displayorder	tinyint(1)	否	
+推荐顺序
+subject	char(80)	否	
+推荐主题标题
+author	char(15)	否	
+推荐主题作者
+authorid	mediumint(8)	否	
+推荐主题作者id
+moderatorid	mediumint(8)	否	
+推荐管理人员id
+expiration	int(10)	否	
+推荐主题有效期
+position	tinyint(1)	否	0	显示位置
+highlight	tinyint(1)	否	0	高亮颜色
+aid	mediumint(8)	否	0	附件ID
+filename	char(100)	否	
+附件文件
+pre_forum_groupcreditslog群组积分日志表
+
+字段	类型	空	默认	注释
+fid	mediumint(8)	否	
+群组ID
+uid	mediumint(8)	否	
+成员UID
+logdate	int(8)	否	0	记录时间
+pre_forum_groupfield群组参数设置表
+
+字段	类型	空	默认	注释
+fid	mediumint(8)	否	0	群组关联fid
+privacy	tinyint(1)	否	0	成员隐私设置
+dateline	int(10)	否	0	邀请时间
+type	varchar(255)	否	
+缓存类型
+data	text	否	
+缓存数据
+pre_forum_groupinvite群主邀请表
+
+字段	类型	空	默认	注释
+fid	mediumint(8)	否	0	群组ID
+uid	mediumint(8)	否	0	邀请人ID
+inviteuid	mediumint(8)	否	0	被邀请人ID
+dateline	int(10)	否	0	邀请时间
+pre_forum_grouplevel群组等级表
+
+字段	类型	空	默认	注释
+levelid	smallint(6)	否	
+等级ID
+type	enum('special', 'default')	否	default	类型
+leveltitle	varchar(255)	否	
+群组等级名称
+creditshigher	int(10)	否	0	该等级的积分上限
+creditslower	int(10)	否	0	该等级的积分下限
+icon	varchar(255)	否	
+等级图标
+creditspolicy	text	否	
+积分策略
+postpolicy	text	否	
+帖子策略
+specialswitch	text	否	
+特殊开能开关
+pre_forum_groupuser群组成员表
+
+字段	类型	空	默认	注释
+fid	mediumint(8)	否	0	群组ID
+uid	mediumint(8)	否	0	用户ID
+username	char(15)	否	
+用户名
+level	tinyint(3)	否	0	成员等级:0 待审核;1 群主;2 副群主;3 明星成员;4 普通成员
+threads	mediumint(8)	否	0	成员主题数
+replies	mediumint(8)	否	0	成员回复数
+joindateline	int(10)	否	0	加入群组时间
+lastupdate	int(10)	否	0	成员最后活动时间
+privacy	tinyint(1)	否	0	成员隐私设置
+pre_forum_hotreply_member回帖投票会员记录表（热帖） X3新增
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	用户id
+attitude	tinyint(1)	否	0	用户投票值
+pre_forum_hotreply_number回帖投票 X3新增
+
+字段	类型	空	默认	注释
+pid	int(10)	否	0	帖子id
+tid	mediumint(8)	否	0	主题id
+support	smallint(6)	否	0	支持数
+against	smallint(6)	否	0	反对数
+total	mediumint(8)	否	0	总数
+pre_forum_imagetype图片 表情 头像等 分类
+
+字段	类型	空	默认	注释
+typeid	smallint(6)	否	
+分类id
+available	tinyint(1)	否	0	是否启用
+name	char(20)	否	
+分类名称
+type	enum('smiley', 'icon', 'avatar')	否	smiley	分类类型
+displayorder	tinyint(3)	否	0	分类顺序
+directory	char(100)	否	
+图片目录
+版权所属：www.cr180.com
+pre_forum_medal勋章表
+
+字段	类型	空	默认	注释
+medalid	smallint(6)	否	
+勋章id
+name	varchar(50)	否	
+勋章名称
+available	tinyint(1)	否	0	是否启用
+image	varchar(255)	否	
+勋章图片
+type	tinyint(1)	否	0	勋章类型
+displayorder	tinyint(3)	否	0	勋章显示顺序
+description	varchar(255)	否	
+勋章描述
+expiration	smallint(6)	否	0	勋章有效期
+permission	mediumtext	否	
+勋章获得条件表达式
+credit	tinyint(1)	否	0	勋章购买使用积分
+price	mediumint(8)	否	0	勋章价格
+pre_forum_medallog勋章日志表
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	
+记录id
+uid	mediumint(8)	否	0	勋章拥有着用户id
+medalid	smallint(6)	否	0	勋章id
+type	tinyint(1)	否	0	勋章类型id
+dateline	int(10)	否	0	颁发时间id
+expiration	int(10)	否	0	有效期id
+status	tinyint(1)	否	0	勋章状态id
+pre_forum_memberrecommend用户推荐表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	
+主题ID
+recommenduid	mediumint(8)	否	
+推荐会员ID
+dateline	int(10)	否	
+推荐时间
+pre_forum_moderator版主表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	会员id
+fid	mediumint(8)	否	0	论坛id
+displayorder	tinyint(3)	否	0	显示顺序
+inherited	tinyint(1)	否	0	是否继承
+pre_forum_modwork论坛管理统计表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	会员id
+modaction	char(3)	否	
+动作
+dateline	date	否	2006-01-01	时间段
+count	smallint(6)	否	0	登录次数
+posts	smallint(6)	否	0	发表数
+pre_forum_newthread最新主题索引表 X3新增（效率优化）
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	
+fid	mediumint(8)	否	0	
+dateline	int(10)	否	0	
+pre_forum_onlinelist在线列表定制
+
+字段	类型	空	默认	注释
+groupid	smallint(6)	否	0	会员组id
+displayorder	tinyint(3)	否	0	显示顺序
+title	varchar(30)	否	
+组名称
+url	varchar(30)	否	
+
+pre_forum_order订单信息表
+
+字段	类型	空	默认	注释
+orderid	char(32)	否	
+订单号id
+status	char(3)	否	
+状态
+buyer	char(50)	否	
+购买者姓名
+admin	char(15)	否	
+补单管理员姓名
+uid	mediumint(8)	否	0	购买者id
+amount	int(10)	否	0	数量
+price	float(7,2)	否	0.00	价格
+submitdate	int(10)	否	0	提交日期
+confirmdate	int(10)	否	0	确认日期
+email	char(40)	否	
+购买时的Email
+ip	char(15)	否	
+购买时的IP
+pre_forum_poll投票特殊主题扩展表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题id
+overt	tinyint(1)	否	0	是否公开投票参与人
+multiple	tinyint(1)	否	0	是否多选
+visible	tinyint(1)	否	0	是否投票后可见
+maxchoices	tinyint(3)	否	0	最大可选项数
+isimage	tinyint(1)	否	0	
+expiration	int(10)	否	0	过期时间
+pollpreview	varchar(255)	否	
+选项内容前两项预览
+voters	mediumint(8)	否	0	投票人数
+pre_forum_polloption投票特殊主题选项表
+
+字段	类型	空	默认	注释
+polloptionid	int(10)	否	
+选项id
+tid	mediumint(8)	否	0	主题id
+votes	mediumint(8)	否	0	票数
+displayorder	tinyint(3)	否	0	显示顺序
+polloption	varchar(80)	否	
+选项内容
+voterids	mediumtext	否	
+投票人id
+pre_forum_polloption_image投票主题-图片选项-附件存放表X3新增
+
+字段	类型	空	默认	注释
+aid	int(10)	否	
+图片附件id
+poid	int(10)	否	0	选项id
+tid	mediumint(8)	否	0	主题id
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	用户id
+filename	varchar(255)	否	
+原文件名
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+width	smallint(6)	否	0	附件宽度
+thumb	tinyint(1)	否	0	是否有缩略图
+dateline	int(10)	否	0	上传时间
+pre_forum_pollvoter投票用户表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题id
+uid	mediumint(8)	否	0	会员id
+username	varchar(15)	否	
+会员名
+options	text	否	
+选项 分隔
+dateline	int(10)	否	0	发表时间
+pre_forum_post主题帖子数据
+
+字段	类型	空	默认	注释
+pid	int(10)	否	
+帖子id
+fid	mediumint(8)	否	0	论坛id
+tid	mediumint(8)	否	0	主题id
+first	tinyint(1)	否	0	是否是首贴
+author	varchar(15)	否	
+作者姓名
+authorid	mediumint(8)	否	0	作者id
+subject	varchar(80)	否	
+标题
+dateline	int(10)	否	0	发表时间
+message	mediumtext	否	
+消息
+useip	varchar(15)	否	
+发帖者IP
+port	smallint(6)	否	0	
+invisible	tinyint(1)	否	0	是否通过审核
+anonymous	tinyint(1)	否	0	是否匿名
+usesig	tinyint(1)	否	0	是否启用签名
+htmlon	tinyint(1)	否	0	是否允许HTML
+bbcodeoff	tinyint(1)	否	0	是否关闭BBCODE
+smileyoff	tinyint(1)	否	0	是否关闭表情
+parseurloff	tinyint(1)	否	0	是否允许粘贴URL
+attachment	tinyint(1)	否	0	附件
+rate	smallint(6)	否	0	评分分数
+ratetimes	tinyint(3)	否	0	评分次数
+status	int(10)	否	0	帖子状态
+tags	varchar(255)	否	0	新增字段，用于存放tag
+comment	tinyint(1)	否	0	是否存在点评
+replycredit	int(10)	否	0	回帖获得积分记录
+position	int(8)	否	
+帖子位置信息
+pre_forum_post_location帖子地理位置表
+
+字段	类型	空	默认	注释
+pid	int(10)	否	0	所属贴子编号pid
+tid	mediumint(8)	是	0	帖子tid
+uid	mediumint(8)	是	0	用户ID
+mapx	varchar(255)	否	
+坐标X
+mapy	varchar(255)	否	
+坐标Y
+location	varchar(255)	否	
+位置信息
+pre_forum_post_moderate帖子审核数据表
+
+字段	类型	空	默认	注释
+id	int(10)	否	0	ID
+status	tinyint(3)	否	0	状态 0 审核中，1 已忽略
+dateline	int(10)	否	0	
+pre_forum_post_tableidpost分表关系
+
+字段	类型	空	默认	注释
+pid	int(10)	否	
+Post ID
+pre_forum_postcache论坛帖子缓存表
+
+字段	类型	空	默认	注释
+pid	int(10)	否	
+
+comment	text	否	
+点评内容缓存
+rate	text	否	
+评分情况缓存
+dateline	int(10)	否	0	
+pre_forum_postcomment点评帖子表
+
+字段	类型	空	默认	注释
+id	int(10)	否	
+
+tid	mediumint(8)	否	0	主题ID
+pid	int(10)	否	0	帖子ID
+author	varchar(15)	否	
+作者
+authorid	mediumint(8)	否	0	作者ID x1.5以后：0为游客　-1为观点
+dateline	int(10)	否	0	时间
+comment	varchar(255)	否	
+点评内容
+score	tinyint(1)	否	0	是否包含点评观点
+useip	varchar(15)	否	
+发帖者IP
+port	smallint(6)	否	0	
+rpid	int(10)	否	0	关联的帖子ID
+pre_forum_postlog漫游帖子日志
+
+字段	类型	空	默认	注释
+pid	int(10)	否	0	所属贴子编号pid
+tid	mediumint(8)	否	0	所属主题编号tid
+fid	smallint(6)	否	0	所属论坛编号fid
+uid	mediumint(8)	否	0	回复用户uid
+action	char(10)	否	
+当前操作
+dateline	int(10)	否	0	回复时间
+pre_forum_poststick回帖置顶表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	
+所属贴子编号tid
+pid	int(10)	否	
+所属主题编号pid
+position	int(10)	否	
+所在楼层
+dateline	int(10)	否	
+置顶时间
+pre_forum_promotion论坛推广
+
+字段	类型	空	默认	注释
+ip	char(15)	否	
+IP地址
+uid	mediumint(8)	否	0	会员id
+username	char(15)	否	
+会员名
+pre_forum_ratelog帖子评分记录表
+
+字段	类型	空	默认	注释
+pid	int(10)	否	0	帖子id
+uid	mediumint(8)	否	0	会员id
+username	char(15)	否	
+会员名
+extcredits	tinyint(1)	否	0	评分字段
+dateline	int(10)	否	0	评分时间
+score	smallint(6)	否	0	分数
+reason	char(40)	否	
+操作理由
+pre_forum_relatedthread相关主题表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题id
+type	enum('general', 'trade')	否	general	关键词类型
+expiration	int(10)	否	0	过期时间
+keywords	varchar(255)	否	
+关键字
+relatedthreads	text	否	
+相关主题序列
+pre_forum_replycredit主题回帖获得积分规则表
+
+字段	类型	空	默认	注释
+tid	mediumint(6)	否	
+主题tid
+extcredits	mediumint(6)	否	0	单次回复奖励额度
+extcreditstype	tinyint(1)	否	0	本规则下奖励积分的类型
+times	smallint(6)	否	0	回复奖励次数
+membertimes	smallint(6)	否	0	单个用户参与次数
+random	tinyint(1)	否	0	用户设置的回帖奖励几率
+pre_forum_rsscacherss缓存表
+
+字段	类型	空	默认	注释
+lastupdate	int(10)	否	0	最后更新时间
+fid	mediumint(8)	否	0	论坛id
+tid	mediumint(8)	否	0	主题id
+dateline	int(10)	否	0	发表时间
+forum	char(50)	否	
+论坛名称
+author	char(15)	否	
+作者
+subject	char(80)	否	
+标题
+description	char(255)	否	
+解释说明
+guidetype	char(10)	否	
+导读中的类型
+pre_forum_sofa优化大师的记录数据 X3新增
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	
+fid	mediumint(8)	否	0	
+pre_forum_spacecacheminispace缓存表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户 uid
+variable	varchar(20)	否	
+缓存变量的名称
+value	text	否	
+缓存变量的值
+expiration	int(10)	否	0	过期时间
+pre_forum_statlog版块统计日志表
+
+字段	类型	空	默认	注释
+logdate	date	否	
+日志日期
+fid	mediumint(8)	否	
+版块ID
+type	smallint(5)	否	0	
+value	int(10)	否	0	记录值
+pre_forum_thread主题数据表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	
+主题id
+fid	mediumint(8)	否	0	上级论坛
+posttableid	smallint(6)	否	0	帖子表ID
+typeid	smallint(6)	否	0	主题分类id
+sortid	smallint(6)	否	0	分类信息id
+readperm	tinyint(3)	否	0	阅读权限
+price	smallint(6)	否	0	价格
+author	char(15)	否	
+会员名
+authorid	mediumint(8)	否	0	会员id
+subject	char(80)	否	
+标题
+dateline	int(10)	否	0	发表时间
+lastpost	int(10)	否	0	最后发表
+lastposter	char(15)	否	
+最后发表人id
+views	int(10)	否	0	浏览次数
+replies	mediumint(8)	否	0	回复次数
+displayorder	tinyint(1)	否	0	显示顺序
+highlight	tinyint(1)	否	0	是否高亮
+digest	tinyint(1)	否	0	是否精华
+rate	tinyint(1)	否	0	是否评分
+special	tinyint(1)	否	0	特殊主题,1:投票;2:商品;3:悬赏;4:活动;5:辩论贴;127:插件相关
+attachment	tinyint(1)	否	0	附件,0无附件 1普通附件 2有图片附件
+moderated	tinyint(1)	否	0	是否被管理员改动
+closed	mediumint(8)	否	0	是否关闭
+stickreply	tinyint(1)	否	0	是否有回帖置顶
+recommends	smallint(6)	否	0	推荐指数
+recommend_add	smallint(6)	否	0	支持人数
+recommend_sub	smallint(6)	否	0	反对人数
+heats	int(10)	否	0	主题热度值
+status	smallint(6)	否	0	位运算存储 0x0000 - FFFF 总共支持16个标志位[1]
+isgroup	tinyint(1)	否	0	是否为群组帖子
+favtimes	mediumint(8)	否	0	主题收藏次数
+sharetimes	mediumint(8)	否	0	主题分享次数
+stamp	tinyint(3)	否	-1	主题图章
+icon	tinyint(3)	否	-1	主题图标
+pushedaid	mediumint(8)	否	0	被推送到的文章aid
+cover	smallint(6)	否	0	主题封面 负数:远程　正数:本地 0:无封面
+replycredit	smallint(6)	否	0	回帖奖励积分主题记录积分值
+relatebytag	char(255)	否	0	根据帖子标签取的相关主题id (time /t tid,...)
+maxposition	int(8)	否	0	最大回帖位置信息
+bgcolor	char(8)	否	
+
+comments	int(10)	否	0	
+hidden	smallint(6)	否	0	
+pre_forum_thread_moderate主题审核数据表
+
+字段	类型	空	默认	注释
+id	int(10)	否	0	ID
+status	tinyint(3)	否	0	状态 0 审核中，1 已忽略
+dateline	int(10)	否	0	
+pre_forum_threadaddviews主题查看数延时更新表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题id
+addviews	int(10)	否	0	浏览次数
+pre_forum_threadcalendar热门主题索引表X3新增
+
+字段	类型	空	默认	注释
+cid	mediumint(8)	否	
+
+fid	mediumint(8)	否	0	
+dateline	int(10)	否	0	
+hotnum	int(10)	否	0	
+pre_forum_threadclass主题分类表
+
+字段	类型	空	默认	注释
+typeid	mediumint(8)	否	
+分类ID
+fid	mediumint(8)	否	
+所属版块ID
+name	varchar(255)	否	
+分类名称
+displayorder	mediumint(9)	否	
+显示顺序
+icon	varchar(255)	否	
+分类图标URL
+moderators	tinyint(1)	否	0	仅管理者可用
+pre_forum_threadclosed移动主题标记表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	被移动主题tid
+redirect	mediumint(8)	否	0	移动后的主题tid
+pre_forum_threaddisablepos主题转移后保留的指向记录
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	对应源主题
+pre_forum_threadhidelog主题隐藏日志表X3新增
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	被隐藏TID
+uid	mediumint(8)	否	0	操作者uid
+pre_forum_threadhot热门主题索引表X3新增
+
+字段	类型	空	默认	注释
+cid	mediumint(8)	否	0	
+fid	mediumint(8)	否	0	来源版块
+tid	mediumint(8)	否	0	帖子tid
+pre_forum_threadimage主题封面数据
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	
+attachment	varchar(255)	否	
+服务器路径
+remote	tinyint(1)	否	0	是否远程附件
+pre_forum_threadlog漫游主题日志
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题ID
+fid	smallint(6)	否	0	版块ID
+uid	mediumint(8)	否	0	用户ID
+otherid	smallint(6)	否	0	相关ID
+action	char(10)	否	
+动作
+expiry	int(10)	否	0	过期时间
+dateline	int(10)	否	0	开始时间
+pre_forum_threadmod主题管理记录表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题id
+uid	mediumint(8)	否	0	会员id
+username	char(15)	否	
+会员名
+dateline	int(10)	否	0	操作时间
+expiration	int(10)	否	0	有效时间
+action	char(5)	否	
+操作
+status	tinyint(1)	否	0	状态
+magicid	smallint(6)	否	
+使用道具id
+stamp	tinyint(3)	否	
+主题图章/图标 ID
+reason	char(40)	否	
+操作原因
+pre_forum_threadpartake主题参与者记录表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	参与时间
+pre_forum_threadpreview服务于广播
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题ID
+relay	int(10)	否	0	转播次数
+content	text	否	
+主题内容预览
+pre_forum_threadprofile贴内用户信息布局方案X3新增 后台-界面设置-贴内用户信息
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	
+
+name	char(100)	否	
+
+template	text	否	
+
+global	tinyint(1)	否	0	
+pre_forum_threadprofile_group贴内用户信息【用户组】布局方案X3新增 同上
+
+字段	类型	空	默认	注释
+gid	mediumint(8)	否	
+
+tpid	mediumint(8)	否	
+
+pre_forum_threadrush抢楼设置表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	0	主题id
+stopfloor	mediumint(8)	否	0	截止楼层
+starttimefrom	int(10)	否	0	开始时间
+starttimeto	int(10)	否	0	结束时间
+rewardfloor	text	否	
+奖励楼层
+creditlimit	int(10)	否	-996	积分下限
+replylimit	smallint(6)	否	0	
+pre_forum_threadtype分类信息表
+
+字段	类型	空	默认	注释
+typeid	smallint(6)	否	
+分类信息id
+fid	mediumint(8)	否	0	
+displayorder	smallint(6)	否	0	显示顺序
+name	varchar(255)	否	
+名称
+description	varchar(255)	否	
+解释说明
+icon	varchar(255)	否	
+分类图标URL
+special	smallint(6)	否	0	分类状态
+modelid	smallint(6)	否	0	分类模型id
+expiration	tinyint(1)	否	0	分类有效期
+template	text	否	
+分类信息内容模板
+stemplate	text	否	
+分类信息主题模板
+ptemplate	text	否	
+分类信息发帖模板
+btemplate	text	否	
+分类信息模块调用模板
+pre_forum_trade商品数据表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	
+主题id
+pid	int(10)	否	
+帖子id
+typeid	smallint(6)	否	
+主题分类id
+sellerid	mediumint(8)	否	
+卖家id
+seller	char(15)	否	
+卖家名
+account	char(50)	否	
+卖家帐号
+tenpayaccount	char(20)	否	
+卖家财付通账号
+subject	char(100)	否	
+标题
+price	decimal(8,2)	否	
+价格
+amount	smallint(6)	否	1	数量
+quality	tinyint(1)	否	0	成色
+locus	char(20)	否	
+所在地
+transport	tinyint(1)	否	0	物流方式
+ordinaryfee	smallint(4)	否	0	平邮附加费
+expressfee	smallint(4)	否	0	快递附加费
+emsfee	smallint(4)	否	0	EMS附加费
+itemtype	tinyint(1)	否	0	商品类型
+dateline	int(10)	否	0	交易时间
+expiration	int(10)	否	0	过期时间
+lastbuyer	char(15)	否	
+最后买家用户名
+lastupdate	int(10)	否	0	最后交易时间
+totalitems	smallint(5)	否	0	总交易量
+tradesum	decimal(8,2)	否	0.00	总交易额
+closed	tinyint(1)	否	0	是否关闭
+aid	mediumint(8)	否	
+商品图片的 Aid
+displayorder	tinyint(1)	否	
+显示顺序
+costprice	decimal(8,2)	否	
+商品原价
+credit	int(10)	否	0	积分价格
+costcredit	int(10)	否	0	积分原价
+credittradesum	int(10)	否	0	总积分交易额
+pre_forum_tradecomment信用评价
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	
+id
+orderid	char(32)	否	
+订单 id
+pid	int(10)	否	
+帖子 id
+type	tinyint(1)	否	
+类型
+raterid	mediumint(8)	否	
+评价方会员id
+rater	char(15)	否	
+评价方用户名
+rateeid	mediumint(8)	否	
+被评价方会员id
+ratee	char(15)	否	
+被评价方用户名
+message	char(200)	否	
+评价内容
+explanation	char(200)	否	
+解释
+score	tinyint(1)	否	
+评分
+dateline	int(10)	否	
+评价时间
+pre_forum_tradelog交易记录表
+
+字段	类型	空	默认	注释
+tid	mediumint(8)	否	
+主题id
+pid	int(10)	否	
+帖子id
+orderid	varchar(32)	否	
+订单号id
+tradeno	varchar(32)	否	
+支付宝订单号
+paytype	tinyint(1)	否	0	在线支付方式
+subject	varchar(100)	否	
+标题
+price	decimal(8,2)	否	0.00	价格
+quality	tinyint(1)	否	0	成色
+itemtype	tinyint(1)	否	0	商品类型
+number	smallint(5)	否	0	数量
+tax	decimal(6,2)	否	0.00	交易手续费
+locus	varchar(100)	否	
+物品所在地
+sellerid	mediumint(8)	否	
+卖家id
+seller	varchar(15)	否	
+卖家名
+selleraccount	varchar(50)	否	
+卖家交易帐号
+tenpayaccount	varchar(20)	否	0	卖家财付通账号
+buyerid	mediumint(8)	否	
+买家id
+buyer	varchar(15)	否	
+买家名
+buyercontact	varchar(50)	否	
+买家联系方式
+buyercredits	smallint(5)	否	0	买家暂扣积分
+buyermsg	varchar(200)	是	
+买家留言
+status	tinyint(1)	否	0	状态
+lastupdate	int(10)	否	0	状态最后更新
+offline	tinyint(1)	否	0	是否离线交易
+buyername	varchar(50)	否	
+买家姓名
+buyerzip	varchar(10)	否	
+买家邮编
+buyerphone	varchar(20)	否	
+买家电话
+buyermobile	varchar(20)	否	
+买家手机
+transport	tinyint(1)	否	0	运输方式
+transportfee	smallint(6)	否	0	运输费用
+baseprice	decimal(8,2)	否	
+商品原价
+discount	tinyint(1)	否	0	折扣
+ratestatus	tinyint(1)	否	0	评价状态
+message	text	否	
+订单留言
+credit	int(10)	否	0	积分价格
+basecredit	int(10)	否	0	积分原价
+pre_forum_typeoption分类信息设置项目表
+
+字段	类型	空	默认	注释
+optionid	smallint(6)	否	
+分类信息项目ID
+classid	smallint(6)	否	0	分类信息上级项目ID
+displayorder	tinyint(3)	否	0	分类信息排序
+expiration	tinyint(1)	否	
+分类信息项目是否受有效期限制
+protect	varchar(255)	否	
+分类信息项目是否是保护项目
+title	varchar(255)	否	
+分类信息项目标题
+description	varchar(255)	否	
+分类信息项目描述
+identifier	varchar(255)	否	
+分类信息项目标识
+type	varchar(255)	否	
+分类信息项目类型
+unit	varchar(255)	否	
+分类信息项目单位
+rules	mediumtext	否	
+分类信息项目规则
+permprompt	mediumtext	否	
+分类信息项目权限提示
+pre_forum_typeoptionvar分类信息项目数据表
+
+字段	类型	空	默认	注释
+sortid	smallint(6)	否	0	分类信息id
+tid	mediumint(8)	否	0	分类信息数据对应帖子id
+fid	mediumint(8)	否	0	分类信息数据对应帖子板块id
+optionid	smallint(6)	否	0	分类信息数据对应选项id
+expiration	int(10)	否	0	分类信息数据有效期
+value	mediumtext	否	
+分类信息数据数值
+pre_forum_typevar分类信息对应项目表
+
+字段	类型	空	默认	注释
+sortid	smallint(6)	否	0	分类信息id
+optionid	smallint(6)	否	0	分类信息对应项目id
+available	tinyint(1)	否	0	分类信息对应项目是否可用
+required	tinyint(1)	否	0	分类信息对应项目是否必填
+unchangeable	tinyint(1)	否	0	分类信息对应项目是否可修改
+search	tinyint(1)	否	0	分类信息对应项目是否可搜索
+displayorder	tinyint(3)	否	0	分类信息对应项目顺序
+subjectshow	tinyint(1)	否	0	
+pre_forum_warning警告记录表
+
+字段	类型	空	默认	注释
+wid	int(10)	否	
+记录id
+pid	int(10)	否	
+帖子 pid
+operatorid	mediumint(8)	否	
+警告者 Uid
+operator	char(15)	否	
+警告者用户名
+authorid	mediumint(8)	否	
+被警告者 uid
+author	char(15)	否	
+被警告者用户名
+dateline	int(10)	否	
+警告时间
+reason	char(40)	否	
+警告原因
+pre_home_album相册表
+
+字段	类型	空	默认	注释
+albumid	mediumint(8)	否	
+相册ID
+albumname	varchar(50)	否	
+相册名字
+catid	smallint(6)	否	0	相册系统分类
+uid	mediumint(8)	否	0	相册用户ID
+username	varchar(15)	否	
+相册用户名
+dateline	int(10)	否	0	相册建立时间戳
+updatetime	int(10)	否	0	相册最后修改时间戳
+picnum	smallint(6)	否	0	相册照片数量
+pic	varchar(255)	否	
+相册封面照片
+picflag	tinyint(1)	否	0	相册是否有图片
+friend	tinyint(1)	否	0	相册隐私设置:"0"全站用户可见,"1"为全好友可见,"2"为仅指定的好友可见,"3"为仅自己可见,"4"为凭密码查看
+password	varchar(10)	否	
+相册密码
+target_ids	text	否	
+允许查看相册的用户ID,多个用户ID用"m"间隔
+favtimes	mediumint(8)	否	
+相册收藏次数
+sharetimes	mediumint(8)	否	
+相册分享次数
+depict	text	否	
+相册描述
+pre_home_album_category相册系统栏目
+
+字段	类型	空	默认	注释
+catid	mediumint(8)	否	
+栏目id
+upid	mediumint(8)	否	0	上级栏目id
+catname	varchar(255)	否	
+标题
+num	mediumint(8)	否	0	相册数
+displayorder	smallint(6)	否	0	显示顺序
+pre_home_appcreditlog漫游应用积分操作记录表
+
+字段	类型	空	默认	注释
+logid	mediumint(8)	否	
+序列id
+uid	mediumint(8)	否	0	用户id
+appid	mediumint(8)	否	0	用户名
+appname	varchar(60)	否	
+应用名称
+type	tinyint(1)	否	0	积分转入转出类型
+credit	mediumint(8)	否	0	积分数
+note	text	否	
+备注
+dateline	int(10)	否	0	操作时间
+pre_home_blacklist屏蔽黑名单表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户ID
+buid	mediumint(8)	否	0	被屏蔽的用户ID
+dateline	int(10)	否	0	被屏蔽的时间戳
+pre_home_blog日志表
+
+字段	类型	空	默认	注释
+blogid	mediumint(8)	否	
+日志ID
+uid	mediumint(8)	否	0	日志所属用户ID
+username	char(15)	否	
+日志所属用户名
+subject	char(80)	否	
+日志标题
+classid	smallint(6)	否	0	个人分类id
+catid	smallint(6)	否	0	系统分类id
+viewnum	mediumint(8)	否	0	日志查看数
+replynum	mediumint(8)	否	0	日志回复数
+hot	mediumint(8)	否	0	热度
+dateline	int(10)	否	0	日志发布时间
+picflag	tinyint(1)	否	0	日志是否有图片
+noreply	tinyint(1)	否	0	是否允许评论:"0"为允许,"1"为不允许
+friend	tinyint(1)	否	0	日志隐私设置:"0"为全站用户可见,"1"为全好友可见,"2"为仅指定的好友可见,"3"为仅自己可见,"4"为凭密码查看
+password	char(10)	否	
+日志密码
+favtimes	mediumint(8)	否	0	日志收藏次数
+sharetimes	mediumint(8)	否	0	日志分享次数
+status	tinyint(1)	否	0	blog状态 1-审核
+click1	smallint(6)	否	0	表态1 id
+click2	smallint(6)	否	0	表态2 id
+click3	smallint(6)	否	0	表态3 id
+click4	smallint(6)	否	0	表态4 id
+click5	smallint(6)	否	0	表态5 id
+click6	smallint(6)	否	0	表态6 id
+click7	smallint(6)	否	0	表态7 id
+click8	smallint(6)	否	0	表态8 id
+pre_home_blog_category日志系统栏目
+
+字段	类型	空	默认	注释
+catid	mediumint(8)	否	
+栏目id
+upid	mediumint(8)	否	0	上级栏目id
+catname	varchar(255)	否	
+标题
+num	mediumint(8)	否	0	日志数
+displayorder	smallint(6)	否	0	显示顺序
+pre_home_blog_moderate日志审核数据表
+
+字段	类型	空	默认	注释
+id	int(10)	否	0	ID
+status	tinyint(3)	否	0	状态 0 审核中，1 已忽略
+dateline	int(10)	否	0	
+pre_home_blogfield日志字段表
+
+字段	类型	空	默认	注释
+blogid	mediumint(8)	否	0	日志id
+uid	mediumint(8)	否	0	日志所属用户ID
+pic	varchar(255)	否	
+标题图片
+tag	varchar(255)	否	
+日志TAG
+message	mediumtext	否	
+日志内容
+postip	varchar(255)	否	
+发表日志的IP
+port	smallint(6)	否	0	
+related	text	否	
+相关日志的数据信息
+relatedtime	int(10)	否	0	相关日志产生时间戳
+target_ids	text	否	
+允许查看日志的用户ID多个ID以","间隔
+hotuser	text	否	
+热点用户
+magiccolor	tinyint(6)	否	0	道具彩色灯id
+magicpaper	tinyint(6)	否	0	道具信纸id
+pushedaid	mediumint(8)	否	0	被推送到的文章aid
+pre_home_class日志个人分类表
+
+字段	类型	空	默认	注释
+classid	mediumint(8)	否	
+个人分类id
+classname	char(40)	否	
+分类名称
+uid	mediumint(8)	否	0	分类所属用户ID
+dateline	int(10)	否	0	分类创建时间戳
+pre_home_click表态动作
+
+字段	类型	空	默认	注释
+clickid	smallint(6)	否	
+表态ID
+name	char(50)	否	
+表态名称
+icon	char(100)	否	
+表态图标
+idtype	char(15)	否	
+表态类型
+available	tinyint(1)	否	0	是否有效
+displayorder	tinyint(6)	否	0	排序
+pre_home_clickuser用户表态表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	表态用户id
+username	varchar(15)	否	
+表态用户名
+id	mediumint(8)	否	0	作用对象id
+idtype	varchar(15)	否	
+作用对象id类型
+clickid	smallint(6)	否	0	表态id
+dateline	int(10)	否	0	发表表态时间戳
+pre_home_comment用户评论表
+
+字段	类型	空	默认	注释
+cid	mediumint(8)	否	
+评论id
+uid	mediumint(8)	否	0	发表评论的用户id
+id	mediumint(8)	否	0	评论对象id
+idtype	varchar(20)	否	
+评论对象的id类型：blogid，picid，uid
+authorid	mediumint(8)	否	0	若为回复,回复作者用户ID
+author	varchar(15)	否	
+若为回复,回复作者用户名
+ip	varchar(20)	否	
+评论IP
+port	smallint(6)	否	0	
+dateline	int(10)	否	0	评论时间戳
+message	text	否	
+评论内容
+magicflicker	tinyint(1)	否	0	是否使用了道具彩虹炫
+status	tinyint(1)	否	0	评论状态 1-审核
+pre_home_comment_moderate家园评论审核数据表
+
+字段	类型	空	默认	注释
+id	int(10)	否	0	ID
+idtype	varchar(15)	否	
+ID类型
+status	tinyint(3)	否	0	状态 0 审核中，1 已忽略
+dateline	int(10)	否	0	
+pre_home_docomment用户记录回复表
+
+字段	类型	空	默认	注释
+id	int(10)	否	
+记录回复id
+upid	int(10)	否	0	上级记录回复id
+doid	mediumint(8)	否	0	所评论的记录id
+uid	mediumint(8)	否	0	发布记录者用户id
+username	varchar(15)	否	
+发布记录者用户名
+dateline	int(10)	否	0	记录回复时间戳
+message	text	否	
+记录回复内容
+ip	varchar(20)	否	
+发布记录ip
+grade	smallint(6)	否	0	记录回复的层级
+pre_home_doing用户记录表
+
+字段	类型	空	默认	注释
+doid	mediumint(8)	否	
+记录id
+uid	mediumint(8)	否	0	记录发布者用户id
+username	varchar(15)	否	
+记录发布者用户名
+from	varchar(20)	否	
+记录的发表来源
+dateline	int(10)	否	0	记录发布时间戳
+message	text	否	
+记录内容
+ip	varchar(20)	否	
+记录发布ip
+port	smallint(6)	否	0	
+replynum	int(10)	否	0	记录回复数
+status	tinyint(1)	否	0	记录状态 1-审核
+pre_home_doing_moderate记录审核数据表
+
+字段	类型	空	默认	注释
+id	int(10)	否	0	ID
+status	tinyint(3)	否	0	状态 0 审核中，1 已忽略
+dateline	int(10)	否	0	
+pre_home_favorite收藏表
+
+字段	类型	空	默认	注释
+favid	mediumint(8)	否	
+收藏id
+uid	mediumint(8)	否	0	会员id
+id	mediumint(8)	否	0	
+idtype	varchar(255)	否	
+
+spaceuid	mediumint(8)	否	0	空间会员id
+title	varchar(255)	否	
+标题
+description	text	否	
+简介
+dateline	int(10)	否	0	
+pre_home_feed站点feed表
+
+字段	类型	空	默认	注释
+feedid	int(10)	否	
+feed的ID
+appid	smallint(6)	否	0	应用程序ID
+icon	varchar(30)	否	
+feed图标
+uid	mediumint(8)	否	0	产生feed的用户ID
+username	varchar(15)	否	
+产生feed的用户名
+dateline	int(10)	否	0	feed产生时间戳
+friend	tinyint(1)	否	0	产生feed信息的隐私设置
+hash_template	varchar(32)	否	
+模板hash:md5(title_template" "body_template)
+hash_data	varchar(32)	否	
+数据内容hash:md5(title_templat" "title_data"	"body_template" "body_data)
+title_template	text	否	
+feed标题模板
+title_data	text	否	
+feed标题
+body_template	text	否	
+feed内容模板
+body_data	text	否	
+feed内容
+body_general	text	否	
+用户填写的信息
+image_1	varchar(255)	否	
+feed图1
+image_1_link	varchar(255)	否	
+feed图片链接1
+image_2	varchar(255)	否	
+feed图片2
+image_2_link	varchar(255)	否	
+feed图片链接2
+image_3	varchar(255)	否	
+feed图片3
+image_3_link	varchar(255)	否	
+feed图片链接3
+image_4	varchar(255)	否	
+feed图片4
+image_4_link	varchar(255)	否	
+feed图片链接4
+target_ids	text	否	
+产生feed信息允许查看的好友ID
+id	mediumint(8)	否	0	feed对应对象id
+idtype	varchar(15)	否	
+feed对应对象类型
+hot	mediumint(8)	否	0	热度
+pre_home_feed_app应该feed表
+
+字段	类型	空	默认	注释
+feedid	int(10)	否	
+应用feed id
+appid	smallint(6)	否	0	应用程序ID
+icon	varchar(30)	否	
+feed图标
+uid	mediumint(8)	否	0	产生feed的用户ID
+username	varchar(15)	否	
+产生feed的用户名
+dateline	int(10)	否	0	feed产生时间戳
+friend	tinyint(1)	否	0	产生feed信息的隐私设置
+hash_template	varchar(32)	否	
+模板hash:md5(title_template" "body_template)
+hash_data	varchar(32)	否	
+数据内容hash:md5(title_templat" "title_data"	"body_template" "body_data)
+title_template	text	否	
+feed标题模板
+title_data	text	否	
+feed标题
+body_template	text	否	
+feed内容模板
+body_data	text	否	
+feed内容
+body_general	text	否	
+用户填写的信息
+image_1	varchar(255)	否	
+feed图1
+image_1_link	varchar(255)	否	
+feed图片链接1
+image_2	varchar(255)	否	
+feed图片2
+image_2_link	varchar(255)	否	
+feed图片链接2
+image_3	varchar(255)	否	
+feed图片3
+image_3_link	varchar(255)	否	
+feed图片链接3
+image_4	varchar(255)	否	
+feed图片4
+image_4_link	varchar(255)	否	
+feed图片链接4
+target_ids	text	否	
+产生feed信息允许查看的好友ID
+pre_home_follow用户关注关系表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户ID
+username	char(15)	否	
+用户名
+followuid	mediumint(8)	否	0	被关注用户ID
+fusername	char(15)	否	
+被关注用户名称
+bkname	varchar(255)	否	
+用户备注
+status	tinyint(1)	否	0	0:正常 1:特殊关注 -1:不能再关注此人
+mutual	tinyint(1)	否	0	0:单向 1:已互相关注
+dateline	int(10)	否	0	
+pre_home_follow_feed被关注者事件表
+
+字段	类型	空	默认	注释
+feedid	mediumint(8)	否	
+自增id
+uid	mediumint(8)	否	0	被关注者ID
+username	varchar(15)	否	
+被关注用户名
+tid	mediumint(8)	否	0	帖子tid
+note	text	否	
+转发理由
+dateline	int(10)	否	0	
+pre_home_follow_feed_archiver被关注者事件存档
+
+字段	类型	空	默认	注释
+feedid	mediumint(8)	否	
+自增id
+uid	mediumint(8)	否	0	被关注者ID
+username	varchar(15)	否	
+被关注用户名
+tid	mediumint(8)	否	0	帖子tid
+note	text	否	
+转发理由
+dateline	int(10)	否	0	
+pre_home_friend用户好友表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户ID
+fuid	mediumint(8)	否	0	用户好友ID
+fusername	varchar(15)	否	
+用户好友名
+gid	smallint(6)	否	0	好友所在的好友组ID
+num	mediumint(8)	否	0	好友之间的任务关系数
+dateline	int(10)	否	0	加好友的时间戳
+note	varchar(255)	否	
+好友备注
+pre_home_friend_request申请好友表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户ID
+fuid	mediumint(8)	否	0	被请求用户ID
+fusername	char(15)	否	
+被请求用户名称
+gid	smallint(6)	否	0	好友所在的好友组ID
+note	char(60)	否	
+申请附言
+dateline	int(10)	否	0	请求好友时间戳
+pre_home_friendlog用户好友动作日志表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户ID
+fuid	mediumint(8)	否	0	好友用户ID
+action	varchar(10)	否	
+好友动作:"add"添加,"update"更新
+dateline	int(10)	否	0	好友动作时间
+pre_home_notification通知提醒数据表
+
+字段	类型	空	默认	注释
+id	mediumint(8)	否	
+通知ID
+uid	mediumint(8)	否	0	通知用户ID
+type	varchar(20)	否	
+通知类型:"doing"记录,"friend"好友请求,"sharenotice"好友分享,"post"话题回复,
+new	tinyint(1)	否	0	通知是否为新:"1"为新通知,"0"为通知已读
+authorid	mediumint(8)	否	0	作者用户ID
+author	varchar(15)	否	
+用户名
+note	text	否	
+通知内容
+dateline	int(10)	否	0	通知产生的时间戳
+from_id	mediumint(8)	否	0	来源对象id
+from_idtype	varchar(20)	否	
+来源对象类型
+from_num	mediumint(8)	否	0	来源量
+category	tinyint(1)	否	0	
+pre_home_pic家园图片表
+
+字段	类型	空	默认	注释
+picid	mediumint(8)	否	
+图片ID
+albumid	mediumint(8)	否	0	图片所属相册ID
+uid	mediumint(8)	否	0	图片所属用户ID
+username	varchar(15)	否	
+图片所属用户名
+dateline	int(10)	否	0	图片上传时间戳
+postip	varchar(255)	否	
+图片上传ip
+port	smallint(6)	否	0	
+filename	varchar(255)	否	
+图片文件名
+title	varchar(255)	否	
+图片标题
+type	varchar(255)	否	
+图片类型
+size	int(10)	否	0	图片大小
+filepath	varchar(255)	否	
+图片路径
+thumb	tinyint(1)	否	0	是否有缩略图
+remote	tinyint(1)	否	0	是否有远程图片0:home本地图片,1:home远程图片,2:论坛本地图片,3论坛远程图片
+hot	mediumint(8)	否	0	热度
+sharetimes	mediumint(8)	否	0	图片分享次数
+click1	smallint(6)	否	0	表态1 id
+click2	smallint(6)	否	0	表态2 id
+click3	smallint(6)	否	0	表态3 id
+click4	smallint(6)	否	0	表态4 id
+click5	smallint(6)	否	0	表态5 id
+click6	smallint(6)	否	0	表态6 id
+click7	smallint(6)	否	0	表态7 id
+click8	smallint(6)	否	0	表态8 id
+magicframe	tinyint(6)	否	0	道具使用相框id
+status	tinyint(1)	否	0	图片状态 1-审核
+pre_home_pic_moderate图片审核数据表
+
+字段	类型	空	默认	注释
+id	int(10)	否	0	ID
+status	tinyint(3)	否	0	状态 0 审核中，1 已忽略
+dateline	int(10)	否	0	
+pre_home_picfield家园图片拓展表
+
+字段	类型	空	默认	注释
+picid	mediumint(8)	否	0	图片id
+hotuser	text	否	
+图片对应热点用户
+pre_home_poke用户招呼表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	接招呼的用户ID
+fromuid	mediumint(8)	否	0	打招呼的用户ID
+fromusername	varchar(15)	否	
+打招呼的用户名
+note	varchar(255)	否	
+招呼内容
+dateline	int(10)	否	0	打招呼时间戳
+iconid	smallint(6)	否	0	招呼图标
+pre_home_pokearchive用户招呼存档表
+
+字段	类型	空	默认	注释
+pid	mediumint(8)	否	
+招呼历史id
+pokeuid	int(10)	否	0	uid + fromuid
+uid	mediumint(8)	否	0	目标用户ID
+fromuid	mediumint(8)	否	0	发起用户ID
+note	varchar(255)	否	
+招呼内容
+dateline	int(10)	否	0	招呼时间戳
+iconid	smallint(6)	否	0	招呼图标
+pre_home_share用户分享表
+
+字段	类型	空	默认	注释
+sid	mediumint(8)	否	
+分享id
+itemid	mediumint(8)	否	
+相关条目的ID
+type	varchar(30)	否	
+分享类型
+uid	mediumint(8)	否	0	分享者用户id
+username	varchar(15)	否	
+分享者用户名
+fromuid	mediumint(8)	否	0	被分享者用户ID
+dateline	int(10)	否	0	分享时间戳
+title_template	text	否	
+分享标题模板
+body_template	text	否	
+分享内容模板
+body_data	text	否	
+分享内容数据
+body_general	text	否	
+分享说明
+image	varchar(255)	否	
+分享的图片
+image_link	varchar(255)	否	
+分享的图片链接
+hot	mediumint(8)	否	0	热度
+hotuser	text	否	
+相关热点用户
+status	tinyint(1)	否	
+分享条目状态 1-审核
+pre_home_share_moderate分享审核数据表
+
+字段	类型	空	默认	注释
+id	int(10)	否	0	ID
+status	tinyint(3)	否	0	状态 0 审核中，1 已忽略
+dateline	int(10)	否	0	
+pre_home_show用户上榜表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	我要上榜用户id
+username	varchar(15)	否	
+我要上榜用户名
+unitprice	int(10)	否	1	单次访问单价
+credit	int(10)	否	0	上榜总积分
+note	varchar(100)	否	
+上榜宣言
+pre_home_specialuser特殊用户表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	用户ID
+username	varchar(15)	否	
+用户名
+status	tinyint(1)	否	0	用户类型0为推荐用户1为默认好友
+dateline	int(10)	否	0	设置时间
+reason	text	否	
+操作原因
+opuid	mediumint(8)	否	0	操作者用户ID
+opusername	varchar(15)	否	
+操作者用户名
+displayorder	mediumint(8)	否	0	显示顺序
+pre_home_userapp用户使用应用表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	使用应用的用户ID
+appid	mediumint(8)	否	0	应用ID
+appname	varchar(60)	否	
+应用名
+privacy	tinyint(1)	否	0	应用是否公开
+allowsidenav	tinyint(1)	否	0	是否在开始菜单中显示
+allowfeed	tinyint(1)	否	0	是否允许应用产生feed
+allowprofilelink	tinyint(1)	否	0	时都允许在首页显示连接
+narrow	tinyint(1)	否	0	是否在个人空间左边显示
+menuorder	smallint(6)	否	0	菜单顺序
+displayorder	smallint(6)	否	0	显示顺序
+pre_home_userappfield用户使用应用扩展表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	使用应用的用户id
+appid	mediumint(8)	否	0	应用id
+profilelink	text	否	
+应用链接
+myml	text	否	
+myml格式的首页显示信息
+pre_home_visitor空间访问日志表
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	受访者用户id
+vuid	mediumint(8)	否	0	访问者用户id
+vusername	char(15)	否	
+访问者用户名
+dateline	int(10)	否	0	访问时间戳
+pre_mobile_setting掌上论坛设置参数表插件
+
+字段	类型	空	默认	注释
+skey	varchar(255)	否	
+
+svalue	text	否	
+
+pre_mobileoem_member掌上论坛独立版 用户表X3新增
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	
+newpush	mediumint(8)	否	0	
+pre_mobileoem_pushthreads掌上论坛独立版 主题推送表X3新增
+
+字段	类型	空	默认	注释
+uid	mediumint(8)	否	0	
+type	tinyint(1)	否	0	
+tid	mediumint(8)	否	0	
+dateline	int(10)	否	0	
+pre_portal_article_content门户文章内容表
+
+字段	类型	空	默认	注释
+cid	int(10)	否	
+内容ID
+aid	mediumint(8)	否	0	文章ID
+id	int(10)	否	0	来源ID
+idtype	varchar(255)	否	
+来源ID类型
+title	varchar(255)	否	
+标题
+content	text	否	
+文章内容
+pageorder	smallint(6)	否	0	分页排序
+dateline	int(10)	否	0	添加时间
+pre_portal_article_count门户文章统计数据表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	0	文章ID
+catid	mediumint(8)	否	0	栏目id
+viewnum	mediumint(8)	否	0	查看数
+commentnum	mediumint(8)	否	0	评论数
+favtimes	mediumint(8)	否	0	文章收藏次数
+sharetimes	mediumint(8)	否	0	文章分享次数
+pre_portal_article_moderate文章审核数据表
+
+字段	类型	空	默认	注释
+id	int(10)	否	0	ID
+status	tinyint(3)	否	0	状态 0 审核中，1 已忽略
+dateline	int(10)	否	0	
+pre_portal_article_related门户相关文章
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+文章ID
+raid	mediumint(8)	否	0	相关文章ID
+displayorder	mediumint(8)	否	0	显示顺序
+pre_portal_article_title门户文章标题表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	
+文章ID
+catid	mediumint(8)	否	0	栏目id
+bid	mediumint(8)	否	0	模块id
+uid	mediumint(8)	否	0	用户id
+username	varchar(255)	否	
+用户名
+title	varchar(255)	否	
+标题
+highlight	varchar(255)	否	
+标题样式
+author	varchar(255)	否	
+原作者
+from	varchar(255)	否	
+来源
+fromurl	varchar(255)	否	
+来源URL
+url	varchar(255)	否	
+访问URL
+summary	varchar(255)	否	
+摘要
+pic	varchar(255)	否	
+封面图片
+thumb	tinyint(1)	否	0	封面图片是否缩略
+remote	tinyint(1)	否	0	封面图片是否远程
+id	int(10)	否	0	来源ID
+idtype	varchar(255)	否	
+来源ID类型
+contents	smallint(6)	否	0	内容分页数
+allowcomment	tinyint(1)	否	0	是否允许评论
+owncomment	tinyint(1)	否	0	对于推送过来的文章：1，使用文章评论；0，同步原主题/日志的帖子/评论
+click1	smallint(6)	否	0	表态1 id
+click2	smallint(6)	否	0	表态2 id
+click3	smallint(6)	否	0	表态3 id
+click4	smallint(6)	否	0	表态4 id
+click5	smallint(6)	否	0	表态5 id
+click6	smallint(6)	否	0	表态6 id
+click7	smallint(6)	否	0	表态7 id
+click8	smallint(6)	否	0	表态8 id
+tag	tinyint(8)	否	0	文章属性，共八位
+dateline	int(10)	否	0	添加时间
+status	tinyint(1)	否	0	文章状态 0-已审核 1-需要审核 2-已忽略
+showinnernav	tinyint(1)	否	0	是否显示分页导航
+preaid	mediumint(8)	否	
+上一篇文章id
+nextaid	mediumint(8)	否	
+下一篇文章id
+htmlmade	tinyint(1)	否	0	
+htmlname	varchar(255)	否	
+
+htmldir	varchar(255)	否	
+
+shorttitle	
+
+
+短标题
+pre_portal_article_trash门户文章回收站表
+
+字段	类型	空	默认	注释
+aid	mediumint(8)	否	0	垃圾文章ID
+content	text	否	
+文章数据的seriallize存储
+pre_portal_attachment门户文章附件表
+
+字段	类型	空	默认	注释
+attachid	mediumint(8)	否	
+附件id
+uid	mediumint(8)	否	0	会员id
+dateline	int(10)	否	0	上传时间
+filename	varchar(255)	否	
+原文件名
+filetype	varchar(255)	否	
+文件类型
+filesize	int(10)	否	0	文件大小
+attachment	varchar(255)	否	
+服务器路径
+isimage	tinyint(1)	否	0	是否图片
+thumb	tinyint(1)	否	0	是否是缩率图
+remote	tinyint(1)	否	0	是否远程附件
+aid	mediumint(8)	否	0	文章id
+pre_portal_category门户 文章栏目表
+
+字段	类型	空	默认	注释
+catid	mediumint(8)	否	
+栏目id
+upid	mediumint(8)	否	0	上级栏目id
+catname	varchar(255)	否	
+标题
+articles	mediumint(8)	否	0	文章数
+allowcomment	tinyint(1)	否	1	是否允许评论
+displayorder	smallint(6)	否	0	显示顺序
+notinheritedarticle	tinyint(1)	否	0	是否不继承上级文章管理权限
+notinheritedblock	tinyint(1)	否	0	是否不继承上级DIY页面和模块权限
+domain	varchar(255)	否	
+二级域名
+url	varchar(255)	否	
+自定义链接
+uid	mediumint(8)	否	0	创建者ID
+username	varchar(255)	否	
+创建者用户名
+dateline	int(10)	否	0	创建时间
+closed	tinyint(1)	否	0	是否关闭
+shownav	tinyint(1)	否	0	是否在导航显示
+description	text	否	
+分类介绍 SEO描述
+seotitle	text	否	
+SEO 标题
+keyword	text	否	
+SEO 关键字
+primaltplname	varchar(255)	否	
+列表页原模板地址
+articleprimaltplname	varchar(255)	否	
+文章页原模板地址
+disallowpublish	tinyint(1)	否	0	是否禁止发布文章
+foldername	varchar(255)	否	
+文件夹名称
+notshowarticlesummay	varchar(255)	否	
+文章内容页是否不显示摘要
+perpage	smallint(6)	否	0	列表每页显示文章数
+maxpages	smallint(6)	否	0	列表最大分页数
+noantitheft	tinyint(1)	否	0	
+lastpublish	int(10)	否	0	
+pre_portal_category_permission文章分类权限表
+
+字段	类型	空	默认	注释
+catid	mediumint(8)	否	0	分类ID
+uid	mediumint(8)	否	0	会员id
+allowpublish	tinyint(1)	否	0	允许发布文章
+allowmanage	tinyint(1)	否	0	允许管理文章
+inheritedcatid	mediumint(8)	否	0	继承自的频道ID
+pre_portal_comment门户评论表
+
+字段	类型	空	默认	注释
+cid	mediumint(8)	否	
+评论id
+uid	mediumint(8)	否	0	发表评论的用户id
+username	varchar(255)	否	
+发表评论的用户名
+id	mediumint(8)	否	0	评论对象id
+idtype	varchar(20)	否	
+评论对象的id类型：aid，topicid
+postip	varchar(255)	否	
+评论IP
+port	smallint(6)	否	0	
+dateline	int(10)	否	0	评论时间戳
+status	tinyint(1)	否	0	评论状态 1-审核
+message	text	否	
+评论内容
+pre_portal_comment_moderate文章/专题评论审核数据表
+
+字段	类型	空	默认	注释
+id	int(10)	否	0	ID
+idtype	varchar(15)	否	
+ID类型
+status	tinyint(3)	否	0	状态 0 审核中，1 已忽略
+dateline	int(10)	否	0	
+pre_portal_rsscache文章rss缓存表
+
+字段	类型	空	默认	注释
+lastupdate	int(10)	否	0	最后更新时间
+catid	mediumint(8)	否	0	文章分类id
+aid	mediumint(8)	否	0	文章id
+dateline	int(10)	否	0	发表时间
+catname	char(50)	否	
+分类名称
+author	char(15)	否	
+作者
+subject	char(80)	否	
+标题
+description	char(255)	否	
+解释说明
+pre_portal_topic门户专题表
+
+字段	类型	空	默认	注释
+topicid	mediumint(8)	否	
+专题ID
+title	varchar(255)	否	
+专题标题
+name	varchar(255)	否	
+静态化名称
+domain	varchar(255)	否	
+二级域名
+summary	text	否	
+专题介绍
+keyword	text	否	
+SEO 关键字
+cover	varchar(255)	否	
+专题封面
+picflag	tinyint(1)	否	0	图片类型 0为url 1为本地 2 为ftp远程
+primaltplname	varchar(255)	否	
+原模板地址
+useheader	tinyint(1)	否	0	是否使用网站导航内容
+usefooter	tinyint(1)	否	0	是否使用网站尾部信息
+uid	mediumint(8)	否	0	创建者UID
+username	varchar(255)	否	
+创建者用户名
+viewnum	mediumint(8)	否	0	查看数
+dateline	int(10)	否	0	创建时间
+closed	tinyint(1)	否	0	是否关闭状态
+allowcomment	tinyint(1)	否	0	是否允许评论
+commentnum	mediumint(8)	否	0	评论数
+htmlmade	tinyint(1)	否	0	
+htmldir	varchar(255)	否	
+
+pre_portal_topic_pic门户专题图片表
+
+字段	类型	空	默认	注释
+picid	mediumint(8)	否	
+图片ID
+topicid	mediumint(8)	否	0	图片所属专题ID
+uid	mediumint(8)	否	0	图片所属用户ID
+username	varchar(15)	否	
+图片所属用户名
+dateline	int(10)	否	0	图片上传时间戳
+filename	varchar(255)	否	
+图片文件名
+title	varchar(255)	否	
+图片标题
+size	int(10)	否	0	图片大小
+filepath	varchar(255)	否	
+图片路径
+thumb	tinyint(1)	否	0	是否有缩略图
+remote	tinyint(1)	否	0	是否有远程图片
+pre_security_evilpost防水墙帖子记录插件
+
+字段	类型	空	默认	注释
+pid	int(10)	否	
+
+tid	mediumint(8)	否	0	
+type	tinyint(1)	否	0	
+evilcount	int(10)	否	0	
+eviltype	mediumint(8)	否	0	
+createtime	int(10)	否	0	
+operateresult	tinyint(1)	否	0	
+isreported	tinyint(1)	否	0	
+censorword	char(50)	否	
+
+pre_security_eviluser防水墙用户记录插件
+
+字段	类型	空	默认	注释
+uid	int(10)	否	
+
+evilcount	int(10)	否	0	
+eviltype	mediumint(8)	否	0	
+createtime	int(10)	否	0	
+operateresult	tinyint(1)	否	0	
+isreported	tinyint(1)	否	0	
+pre_security_failedlog防水墙失败日志记录插件
+
+字段	类型	空	默认	注释
+id	int(11)	否	
+
+reporttype	char(20)	否	
+
+tid	int(10)	否	0	
+pid	int(10)	否	0	
+uid	int(10)	否	0	
+failcount	int(10)	否	0	
+createtime	int(10)	否	0	
+posttime	int(10)	否	0	
+delreason	char(255)	否	
+
+scheduletime	int(10)	否	0	
+lastfailtime	int(10)	否	0	
+extra1	int(10)	否	
+
+extra2	char(255)	否	0	
