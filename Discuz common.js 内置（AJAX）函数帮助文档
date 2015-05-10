@@ -1,0 +1,122 @@
+showMenu() 显示弹出菜单
+function showMenu(v)
+<h1>hello world</h1>
+参数 v 格式：{'key1':'value1','key2':'value2','key3':'value3'}
+目前，数组 v 支持传递的 key 有：
+key	默认值	含义	可选值及解释
+ctrlid	(必填)	控制菜单的 id	
+showid	ctrlid	弹出菜单的 id	
+menuid	showid + '_menu'	显示菜单的 id	
+evt	'mouseover'	响应函数的事件	click: ctrlObj 的 onclick 触发
+mouseover: ctrlObj 的 onmouseover 触发
+pos	'43'	菜单位置	详见 setMenuPosition() 中对 pos 的解释
+layer	1	菜单层级	大于 0 的任意整数
+duration	2	菜单显示方式	3:菜单一直显示，除非执行 hideMenu()，或者页面 unload
+2:鼠标移开 ctrlObj 及 menuObj 即开始计时 timeout 毫秒后消失
+1:鼠标移开 ctrlObj 即开始计时 timeout 毫秒后消失
+0:菜单显示即开始计时 timeout 毫秒后消失
+timeout	250	菜单持续时间	单位：毫秒
+mtype	'menu'	菜单类型	menu:普通菜单
+win:浮窗
+prompt:提示信息
+dialog:对话框
+maxh	600	菜单最大高度，实际高度超过 maxh 时菜单将出现垂直滚动条	
+cache	1	是否缓存菜单	1:是
+0:否
+drag		拖拽菜单对象的 id，如果希望整个菜单都可以拖拽 请设置 drag 等于1	
+fade	0	淡入淡出效果	1:是
+0:否
+cover	0	是否显示一个遮罩覆盖整个页面	1:是
+0:否
+zindex	JSMENU['zIndex']['menu']	菜单层叠顺序	
+ctrlclass		控制对象在菜单弹出后的 class 值，duration = 2 时有效	
+showDialog() 显示对话框
+function showDialog(msg, mode, t, func, cover, funccancel, leftmsg, confirmtxt, canceltxt, closetime, locationtime)
+key	默认值	含义	可选值及解释
+msg	(必填)	提示信息内容	
+mode	'alert'	对话框模式	alert/right:有确定按钮
+confirm:有确定和取消按钮
+notice:有确定按钮
+info:没有按钮
+t	'提示信息'	对话框标题	
+func		点"确定"执行的函数	
+cover	1 (mode = 'info' 时为 0)	是否显示一个遮罩覆盖整个页面	1:是
+0:否
+funccancel		点"取消"执行的函数	
+leftmsg		底部左侧信息	
+confirmtxt	'确定'	确定按钮的文字	
+canceltxt	'取消'	取消按钮的文字	
+closetime		自动关闭的时间，单位"秒"
+leftmsg 强制更改为"n 秒后窗口关闭"
+locationtime		自动跳转时间，单位"秒"
+leftmsg 强制更改为"n 秒后页面跳转"
+showWindow() AJAX弹窗
+showWindow(k, url, mode, cache, v)
+key	默认值	含义	可选值及解释
+k	(必填)	浮窗的 key	
+url	(必填)	get 方式 url 表示浮窗请求的地址
+post 方式 url 表示浮窗提交的表单 id
+mode	'get'	弹窗请求类型	get: ajaxget 方式请求 url
+post: ajaxpost 方式请求 url
+cache	1	是否缓存弹窗内容	1:是
+0:否
+v		由于 showWindow() 是以 showMenu() 函数为内核，因此此处可微调 showMenu() 参数，如不指定则使用 showWindow() 的默认值	
+注意：
+同一页面同时可以弹出多个浮窗，但 k 及 url 相同的浮窗同时只能显示一个
+浮窗标题区域支持拖拽
+关闭浮窗请使用 hideWindow(k);
+setMenuPosition() 菜单定位
+setMenuPosition(showid, menuid, pos)
+key	默认值	含义	可选值及解释
+showid	(必填)	弹出菜单的 id	
+menuid	(必填)	菜单 id	
+pos	'43'	菜单弹出位置及方向，必须是字串类型
+格式"BD"，B 为基点 D 为方向。方向设定后，函数会根据实际弹出的位置及浏览器窗口大小进行二次调整，取消二次调整请以"!"结尾表示强制
+BD:自定义
+B:        D:       
+1:左上角  1:左上方
+2:右上角  2:右上方
+3:右下角  3:右下方
+4:左下角  4:左下方
+00:屏幕居中
+不需要设置位置
+ajaxget() AJAX/GET请求
+ajaxget(url, showid, waitid, loading, display, recall)
+
+key	默认值	含义
+url	(必填)	请求的 url
+showid	(必填)	ajax 返回信息显示区域的 id
+waitid	showid	ajax 请求过程中显示等待信息区域的 id
+display		信息返回后 showId 的 style.display 值
+recall		信息返回后执行的代码
+ajax返回内容中的<A>标记可增加如下几个属性，可让<A>链接自动实现ajaxget功能
+ajaxtarget: 属性含义同 ajaxget() 的 showid
+ajaxwaitid: 属性含义同 ajaxget() 的 waitid
+ajaxloading: 属性含义同 ajaxget() 的 loading
+ajaxdisplay: 属性含义同 ajaxget() 的 display
+ajaxfunc：属性含义同 ajaxget() 的 recall
+ajaxpost() AJAX/POST请求
+function ajaxpost(formid, showid, waitid, showidclass, submitbtn, recall)
+key	默认值	含义
+formid	(必填)	ajax 提交的表单 id
+showid	(必填)	ajax 返回信息显示区域的 id
+waitid	showid	ajax 请求过程中显示等待信息区域的 id
+showidclass		表单提交后返回信息显示区域的样式
+submitbtn		表单提交按钮 ajax 请求发出后将会禁用这个按钮
+recall		信息返回后执行的代码
+
+ajaxmenu() AJAX/GET请求 显示弹出菜单
+ajaxmenu(ctrlObj, timeout, cache, duration, pos, recall, idclass, contentclass)
+key	默认值	含义	可选值及解释
+ctrlObj	(必填)	控制菜单的对象	
+timeout	3000	菜单持续时间	
+cache	1	是否缓存菜单	1:是
+0:否
+duration	0 (timeout = 0 时为 3)	菜单显示方式	3:菜单一直显示，除非执行 hideMenu()，或者页面 unload
+2:鼠标移开 ctrlObj 及 menuObj 即开始计时 timeout 毫秒后消失
+1:鼠标移开 ctrlObj 即开始计时 timeout 毫秒后消失
+0:菜单显示即开始计时 timeout 毫秒后消失
+pos	'43'	菜单位置	详见 setMenuPosition() 中对 pos 的解释
+recall		信息返回后执行的代码	
+idclass	'p_pop'	菜单的 class 属性值	
+contentclass	'p_opt'	菜单内容的 class 属性值	
